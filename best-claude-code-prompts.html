@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 10 Best Claude Code Prompts That Will 10x Your Productivity | rog0x</title>
+    <meta name="description" content="10 proven Claude Code prompt patterns used by senior engineers. Copy-paste these prompts to generate production-quality code, reviews, tests, and architecture.">
+    <meta name="keywords" content="Claude Code prompts, best AI prompts, developer productivity, Claude Code tips, AI coding">
+    <link rel="canonical" href="https://rog0x-blog.vercel.app/best-claude-code-prompts.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article h3 { font-size: 1.15rem; margin: 24px 0 8px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul, article ol { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>The 10 Best Claude Code Prompts That Will 10x Your Productivity</h1>
+            <div class="meta">March 19, 2026 &middot; 10 min read &middot; <span class="tag">Claude Code</span><span class="tag">Prompts</span><span class="tag">Productivity</span></div>
+
+            <p>Most developers use Claude Code like a search engine — they ask vague questions and get vague answers. Senior engineers use it like a pair programmer by writing structured, specific prompts that produce production-ready output.</p>
+
+            <p>Here are 10 prompt patterns that consistently deliver results. Each one is battle-tested across real projects.</p>
+
+            <h2>1. The Full-Stack Scaffold</h2>
+
+            <p>Instead of building piece by piece, describe the entire application architecture in one prompt. Claude works better with full context.</p>
+
+            <pre><code>Build a complete Next.js application with:
+- Backend: Express API with JWT authentication
+- Database: PostgreSQL with Prisma ORM
+- CRUD endpoints for "projects" resource
+- Frontend: React with Tailwind CSS
+- Docker Compose for local development
+- README with setup instructions
+
+Start with the backend, ensure each endpoint works,
+then build the frontend.</code></pre>
+
+            <p><strong>Why it works:</strong> Giving Claude the full picture lets it make consistent architectural decisions across the stack, rather than creating disjointed pieces.</p>
+
+            <h2>2. The Security Auditor</h2>
+
+            <p>Don't wait for a security breach. Ask Claude to think like an attacker.</p>
+
+            <pre><code>Perform a security audit on this codebase. Check for:
+1. Injection vulnerabilities (SQL, XSS, command)
+2. Authentication weaknesses
+3. Authorization bypasses (IDOR, privilege escalation)
+4. Sensitive data exposure in logs/responses
+5. Missing security headers
+
+For each finding: CWE ID, risk level, proof of concept,
+and remediation code.</code></pre>
+
+            <p><strong>Why it works:</strong> The structured checklist ensures Claude doesn't skip categories. Asking for proof of concept forces concrete, actionable findings rather than vague warnings.</p>
+
+            <h2>3. The Test Generator</h2>
+
+            <pre><code>Write thorough API tests for the /users endpoint:
+
+1. Happy path (valid request returns correct response)
+2. Auth tests (missing/invalid/expired token)
+3. Validation (each required field missing, invalid types,
+   boundary values)
+4. Not found (non-existent resource)
+5. Concurrency (simultaneous updates)
+6. Rate limiting
+
+Use Jest with supertest. Include setup/teardown
+for test data isolation.</code></pre>
+
+            <p><strong>Why it works:</strong> The numbered test categories prevent Claude from only writing happy-path tests. Most AI-generated tests miss edge cases unless explicitly asked.</p>
+
+            <h2>4. The Code Reviewer</h2>
+
+            <pre><code>Review this code with focus on:
+1. Security - OWASP Top 10 vulnerabilities
+2. Performance - N+1 queries, memory leaks, O(n^2) loops
+3. Maintainability - duplication, naming, single responsibility
+4. Error handling - uncaught exceptions, missing edge cases
+
+For each issue: severity (Critical/High/Medium/Low),
+file:line reference, what's wrong and WHY it matters,
+concrete fix as a code snippet.
+
+Skip style-only nitpicks.</code></pre>
+
+            <p><strong>Why it works:</strong> The "skip style-only nitpicks" instruction is key. Without it, Claude will spend 80% of the review on formatting. The severity levels help you prioritize what to fix first.</p>
+
+            <h2>5. The Performance Profiler</h2>
+
+            <pre><code>Profile and optimize the performance of [slow operation]:
+
+Current: [current metric]
+Target: [target metric]
+
+Steps:
+1. Measure - establish baseline with precise timing
+2. Identify top 3 bottlenecks
+3. For each: is it CPU-bound, I/O-bound, or memory-bound?
+4. Optimize in order of impact (quick wins first)
+5. Measure again, compare with baseline
+
+Rule: Optimize based on measurements, not assumptions.</code></pre>
+
+            <p><strong>Why it works:</strong> The "measure, don't assume" framing prevents Claude from guessing at optimizations. It forces a systematic approach that mirrors how senior engineers actually debug performance.</p>
+
+            <h2>6. The Refactoring Guide</h2>
+
+            <pre><code>Refactor this legacy code to modern standards:
+
+Goals:
+1. Modernize syntax to ES2024
+2. Extract functions longer than 30 lines
+3. Replace callbacks with async/await
+4. Apply SOLID principles where violated
+5. Remove dead code
+
+Rules:
+- Do NOT change external behavior (pure refactoring)
+- Keep all existing tests passing
+- Show before/after for each significant change</code></pre>
+
+            <p><strong>Why it works:</strong> The "do NOT change external behavior" rule is critical. Without it, Claude will "improve" the code by adding features, changing APIs, or breaking things that worked.</p>
+
+            <h2>7. The API Designer</h2>
+
+            <pre><code>Design the REST API for [product]:
+
+For each resource:
+- URL pattern (RESTful conventions)
+- HTTP methods
+- Request/response body (JSON Schema)
+- Status codes for each scenario
+- Pagination approach
+- Error response format
+
+Then generate an OpenAPI 3.0 spec and
+code examples in curl, JavaScript, and Python.</code></pre>
+
+            <p><strong>Why it works:</strong> Asking for the OpenAPI spec forces Claude to be precise about every field and type. The multi-language examples catch inconsistencies — if the curl example works but the Python one doesn't, there's a bug in the design.</p>
+
+            <h2>8. The Debugging Partner</h2>
+
+            <pre><code>Debug this issue systematically:
+
+Bug: [description]
+Expected: [behavior]
+Actual: [behavior]
+
+Investigation:
+1. Reproduce - create minimal reproduction
+2. Isolate - binary search for the cause
+3. Understand - trace code path, add logging
+4. Fix - apply minimal change
+5. Verify - write test that catches this bug
+6. Prevent - add guard to prevent recurrence
+
+Show your reasoning at each step.</code></pre>
+
+            <p><strong>Why it works:</strong> "Show your reasoning" is the secret weapon. It forces Claude to think through the problem rather than jumping to a solution. The systematic steps prevent the common pattern of "try random things until it works."</p>
+
+            <h2>9. The Documentation Writer</h2>
+
+            <pre><code>Create a README for this project:
+
+1. Title + one-line description
+2. Quick Start (clone to running in under 5 commands)
+3. Installation (prerequisites, step-by-step)
+4. Usage (3 most common use cases with code)
+5. Configuration (all env vars in a table)
+6. Architecture (Mermaid diagram, key decisions)
+7. Contributing (PR process, code style)
+
+Keep it scannable. Headers, bullets, code blocks.
+No walls of text.</code></pre>
+
+            <p><strong>Why it works:</strong> "No walls of text" and "scannable" are instructions that dramatically improve README quality. Without them, Claude writes essay-style documentation that nobody reads.</p>
+
+            <h2>10. The Deployment Pipeline</h2>
+
+            <pre><code>Create a GitHub Actions CI/CD pipeline:
+
+On push to feature branch:
+  Lint -> Test -> Build -> Deploy to preview URL
+
+On merge to main:
+  Full tests -> Build -> Deploy staging ->
+  Smoke tests -> Manual approval -> Deploy production
+
+Include:
+- Dependency caching
+- Parallel test execution
+- Slack notification on failure
+- Rollback procedure</code></pre>
+
+            <p><strong>Why it works:</strong> The visual pipeline layout (with arrows) gives Claude the exact flow to implement. Adding "rollback procedure" catches a step most developers forget until they need it desperately.</p>
+
+            <h2>The Pattern Behind All 10</h2>
+
+            <p>Notice what all these prompts have in common:</p>
+
+            <ol>
+                <li><strong>Specific structure</strong> — numbered lists, not vague requests</li>
+                <li><strong>Clear scope</strong> — what to include AND what to skip</li>
+                <li><strong>Output format</strong> — tell Claude exactly how to format the response</li>
+                <li><strong>Quality constraints</strong> — "skip nitpicks", "don't change behavior", "show reasoning"</li>
+            </ol>
+
+            <p>The difference between a mediocre prompt and a great one isn't length — it's specificity. Tell Claude what you want, what you don't want, and how to organize it.</p>
+
+            <div class="cta-box">
+                <h3>Want All 50 Prompts?</h3>
+                <p>These 10 are from our Ultimate Claude Code Prompt Pack. The full pack includes 50 prompts covering code generation, reviews, testing, DevOps, debugging, documentation, and architecture.</p>
+                <a href="https://github.com/rog0x/claude-code-prompts">Get the Full Pack</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
