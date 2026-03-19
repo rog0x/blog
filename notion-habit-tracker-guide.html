@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a Habit Tracker in Notion That Actually Sticks | rog0x</title>
+    <meta name="description" content="How to build a habit tracker in Notion with streaks, mood tracking, and weekly reviews. The system that turns goals into daily actions. Template included.">
+    <meta name="keywords" content="Notion habit tracker, habit tracker template, daily habits Notion, streak tracker, Notion journal template">
+    <link rel="canonical" href="https://rog0x-blog.vercel.app/notion-habit-tracker-guide.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul, article ol { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>Build a Habit Tracker in Notion That Actually Sticks</h1>
+            <div class="meta">March 20, 2026 &middot; 5 min read &middot; <span class="tag">Notion</span><span class="tag">Habits</span><span class="tag">Productivity</span></div>
+
+            <p>You've tried habit apps. Habitica, Streaks, Loop, Daylio — downloaded, used for a week, forgotten. The problem isn't willpower. It's friction. Opening a separate app to check off habits feels like work.</p>
+
+            <p>But Notion? You're already in it all day. Adding a habit check takes 3 seconds. No extra app, no extra login, no extra subscription.</p>
+
+            <h2>The Minimum Viable Habit Tracker</h2>
+
+            <p>Start with the simplest possible system:</p>
+
+            <ol>
+                <li><strong>One database.</strong> Columns: Date, plus one checkbox per habit.</li>
+                <li><strong>5-6 habits max.</strong> More than that and you'll skip the whole thing.</li>
+                <li><strong>Check boxes every night.</strong> 30 seconds before bed.</li>
+            </ol>
+
+            <p>That's it. No mood tracking, no journaling, no fancy dashboards. Just checkboxes. Build the habit of tracking habits first.</p>
+
+            <h2>Adding Streaks</h2>
+
+            <p>After 2 weeks of consistent tracking, add a formula that counts your current streak. Seeing "Day 14" next to a habit creates a psychological cost to breaking the chain. "I can't break my 14-day streak" is more motivating than "I should exercise."</p>
+
+            <h2>Adding Mood + Energy</h2>
+
+            <p>After a month, add two select fields: Mood (Great/Good/OK/Low/Bad) and Energy (High/Medium/Low). Now you can correlate:</p>
+
+            <ul>
+                <li>Do you feel better on days you exercise?</li>
+                <li>Does meditation affect your mood?</li>
+                <li>What habits have the biggest impact on energy?</li>
+            </ul>
+
+            <p>This turns gut feeling into data.</p>
+
+            <h2>Weekly Reviews</h2>
+
+            <p>Every Sunday, 5 minutes:</p>
+
+            <ol>
+                <li>What went well this week?</li>
+                <li>What was hard?</li>
+                <li>What do I adjust for next week?</li>
+                <li>Three things I'm grateful for.</li>
+            </ol>
+
+            <p>Over months, these reviews become a journal of personal growth. You can look back at "Week 1: struggled with meditation" and see "Week 12: didn't miss a day" and feel genuinely proud.</p>
+
+            <h2>The Starter Habits</h2>
+
+            <p>Don't overthink which habits to track. Start with these 6:</p>
+
+            <ol>
+                <li><strong>Drink water</strong> — 8 glasses</li>
+                <li><strong>Move</strong> — 30 minutes of any exercise</li>
+                <li><strong>Read</strong> — 20 pages or 15 minutes</li>
+                <li><strong>No phone before 9am</strong> — protect your morning</li>
+                <li><strong>Meditate</strong> — even 5 minutes counts</li>
+                <li><strong>Journal</strong> — one sentence before bed</li>
+            </ol>
+
+            <p>After 30 days, swap out habits that don't resonate. Add new ones that matter to you. The system is yours to customize.</p>
+
+            <h2>Why This Works</h2>
+
+            <ul>
+                <li><strong>Low friction.</strong> You're already in Notion. It's one click.</li>
+                <li><strong>Visual progress.</strong> Streaks and completion percentages make progress tangible.</li>
+                <li><strong>Connected data.</strong> Habits link to mood. Mood links to journal. Everything tells a story.</li>
+                <li><strong>No subscription.</strong> $0 beyond what you already pay for Notion.</li>
+                <li><strong>Portable.</strong> Works on phone, tablet, laptop. Same data everywhere.</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>Daily Habit Journal for Notion — $6.99</h3>
+                <p>6 connected pages: daily tracker with streaks, mood/energy logging, habit library, weekly reviews, monthly overview, guided journal. Pre-built with 6 starter habits.</p>
+                <a href="https://github.com/rog0x/notion-habit-journal">Get the Template</a>
+            </div>
+
+            <p>The best habit system is invisible. It doesn't fight for your attention — it lives where you already are. Start tonight: open Notion, create a table, add 5 checkboxes, check them off before bed. Day 1 done.</p>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
