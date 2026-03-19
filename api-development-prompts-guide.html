@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 AI Prompts for API Development: REST, Auth, Database, Testing | rog0x</title>
+    <meta name="description" content="AI prompts for backend developers: REST API design, JWT authentication, database optimization, API testing, caching strategies. Ready-to-use templates.">
+    <meta name="keywords" content="API development prompts, REST API AI, backend development, JWT auth prompt, database optimization AI, API testing">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>AI Prompts for API Development</h1>
+            <div class="meta">March 20, 2026 &middot; 6 min read &middot; <span class="tag">API</span><span class="tag">Backend</span><span class="tag">AI</span></div>
+
+            <p>Backend development is 80% patterns. REST endpoint design, JWT auth, database queries, test suites — the structure is always the same. AI handles the structure, you handle the business logic.</p>
+
+            <h2>REST API Design</h2>
+
+            <pre><code>Design REST endpoints for [RESOURCE]:
+
+For each endpoint:
+- Method + URL (RESTful conventions)
+- Request body (JSON Schema)
+- Response (success + error examples)
+- Status codes
+- Pagination for lists
+- Authentication requirement
+
+Generate OpenAPI 3.0 spec.
+Framework: [Express/FastAPI/Django]</code></pre>
+
+            <h2>JWT Authentication</h2>
+
+            <pre><code>Implement JWT auth for [FRAMEWORK]:
+
+1. Registration (email + bcrypt password)
+2. Login (access token 15min + refresh 7d)
+3. Token refresh endpoint
+4. Middleware for protected routes
+5. Role-based access (admin/user)
+
+Security:
+- httpOnly cookies for refresh
+- Rate limiting on auth endpoints
+- Account lockout after 5 failures</code></pre>
+
+            <h2>Database Optimization</h2>
+
+            <pre><code>Optimize this query:
+
+[paste SQL]
+
+Table sizes: [row counts]
+Current time: [execution time]
+
+Analyze:
+1. Why is it slow?
+2. Optimized query
+3. Indexes to add
+4. Execution plan analysis</code></pre>
+
+            <h2>API Testing</h2>
+
+            <pre><code>Write API tests for [ENDPOINT]:
+
+1. Happy path (valid request)
+2. Auth (missing/invalid/expired token)
+3. Validation (missing fields, wrong types)
+4. Not found (non-existent resource)
+5. Concurrency (simultaneous updates)
+6. Rate limiting
+
+Framework: [Jest/Pytest]</code></pre>
+
+            <h2>MCP Tools for APIs</h2>
+
+            <ul>
+                <li><strong>mcp-api-tools</strong> — HTTP requests, health checks, JWT decode, headers</li>
+                <li><strong>mcp-database-tools</strong> — SQL format, explain, schema, migrations</li>
+                <li><strong>mcp-schema-tools</strong> — JSON Schema, TypeScript types, validation</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>30 API Development Prompts</h3>
+                <p>REST design, auth, database, testing, caching, scaling. Each prompt with variables and examples.</p>
+                <a href="https://t.me/rog0x_store_bot">Get API Dev Prompts ($9.99)</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
