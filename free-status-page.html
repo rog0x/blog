@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Status Page for Your Website — Monitor Uptime Without Paying | rog0x</title>
+    <meta name="description" content="Free status page that monitors your website uptime and response time. No credit card required. 3 monitors free. Built with Next.js, deployed on Vercel.">
+    <meta name="keywords" content="free status page, uptime monitor free, website monitoring, status page tool, open source status page">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>Free Status Page for Your Website</h1>
+            <div class="meta">March 20, 2026 &middot; 4 min read &middot; <span class="tag">SaaS</span><span class="tag">Monitoring</span><span class="tag">Free</span></div>
+
+            <p>Statuspage.io costs $29/month. Better Uptime costs $20/month. For a simple "is my site up?" check with a public status page, that's overkill.</p>
+
+            <p>We built a free alternative. 3 monitors, uptime tracking, response time, incident history. No credit card. No trial that expires.</p>
+
+            <h2>What You Get (Free)</h2>
+
+            <ul>
+                <li><strong>3 URL monitors</strong> — check any website every 5 minutes</li>
+                <li><strong>Uptime percentage</strong> — 99.9% over 30/90 days</li>
+                <li><strong>Response time</strong> — average, p95, trend</li>
+                <li><strong>Public status page</strong> — share with your users</li>
+                <li><strong>Incident history</strong> — when it went down, for how long</li>
+            </ul>
+
+            <h2>Pro ($9/month)</h2>
+
+            <ul>
+                <li>Unlimited monitors</li>
+                <li>1-minute check intervals</li>
+                <li>Slack/Discord/email alerts</li>
+                <li>Custom domain</li>
+                <li>Team members</li>
+                <li>API access</li>
+            </ul>
+
+            <h2>Why Another Status Page?</h2>
+
+            <p>Most status page tools are built for enterprises. They have 50 features you don't need and charge accordingly. We built for indie hackers, small teams, and side projects that need a simple answer: "is it up?"</p>
+
+            <h2>How It Works</h2>
+
+            <p>Add your URLs. We ping them at regular intervals. If something goes down, it shows on your status page. Your users check the page instead of emailing you "is your site down?"</p>
+
+            <div class="cta-box">
+                <h3>Try the Demo</h3>
+                <p>See a live status page with 5 example monitors. No signup required.</p>
+                <a href="https://status-page-peach.vercel.app/demo">View Demo</a>
+            </div>
+
+            <p>Open source on <a href="https://github.com/rog0x/status-page">GitHub</a>. Self-host for free or use our hosted version.</p>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
