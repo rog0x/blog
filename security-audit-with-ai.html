@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Run a Security Audit with AI Prompts | rog0x</title>
+    <meta name="description" content="Use AI to audit your code for security vulnerabilities. OWASP Top 10, SQL injection, XSS, auth issues, dependency audits. Copy-paste prompt templates.">
+    <meta name="keywords" content="security audit AI, OWASP AI, code security prompts, vulnerability scanner AI, appsec AI tools">
+    <link rel="canonical" href="https://rog0x-blog.vercel.app/security-audit-with-ai.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul, article ol { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>How to Run a Security Audit with AI Prompts</h1>
+            <div class="meta">March 20, 2026 &middot; 7 min read &middot; <span class="tag">Security</span><span class="tag">AI</span><span class="tag">OWASP</span></div>
+
+            <p>Most applications ship with security vulnerabilities. Not because developers don't care, but because security reviews take time nobody has. AI changes that equation — a thorough security audit that used to take days now takes hours.</p>
+
+            <p>Here are the prompts that find real vulnerabilities.</p>
+
+            <h2>The OWASP Top 10 Audit</h2>
+
+            <pre><code>Audit this code for OWASP Top 10 vulnerabilities:
+
+[paste code or describe the application]
+
+Check for:
+1. Injection (SQL, NoSQL, OS command, LDAP)
+2. Broken Authentication
+3. Sensitive Data Exposure
+4. XML External Entities (XXE)
+5. Broken Access Control
+6. Security Misconfiguration
+7. Cross-Site Scripting (XSS)
+8. Insecure Deserialization
+9. Using Components with Known Vulnerabilities
+10. Insufficient Logging & Monitoring
+
+For each finding:
+- CWE identifier
+- Risk level (Critical/High/Medium/Low)
+- Proof of concept
+- Remediation code</code></pre>
+
+            <p>The structured checklist ensures AI doesn't skip categories. The "proof of concept" requirement forces concrete findings instead of vague warnings.</p>
+
+            <h2>SQL Injection Scanner</h2>
+
+            <pre><code>Find all SQL injection vectors in this code:
+
+[paste code]
+
+For each vector:
+1. The vulnerable line/function
+2. What user input reaches the query
+3. Example malicious input
+4. The fix (parameterized query)
+
+Also check for:
+- ORM misuse (raw queries with string interpolation)
+- Dynamic table/column names from user input
+- LIKE clauses with unescaped wildcards</code></pre>
+
+            <h2>Authentication Audit</h2>
+
+            <pre><code>Audit the authentication system:
+
+[describe or paste auth code]
+
+Check:
+1. Password hashing (bcrypt? salt? cost factor?)
+2. Session management (token type, expiry, storage)
+3. Brute force protection (rate limiting, lockout)
+4. Password reset flow (token expiry, one-time use)
+5. JWT implementation (algorithm, expiry, refresh flow)
+6. OAuth implementation (state parameter, redirect validation)
+7. 2FA implementation (backup codes, rate limiting)
+
+For each issue: severity, exploit scenario, fix.</code></pre>
+
+            <h2>Dependency Audit</h2>
+
+            <pre><code>Audit dependencies in this package.json:
+
+[paste package.json]
+
+Check:
+1. Known CVEs in current versions
+2. Packages that haven't been updated in 2+ years
+3. Packages with very few maintainers (bus factor)
+4. Packages that are deprecated
+5. Unnecessary dependencies (do we really need lodash?)
+6. Dev dependencies accidentally in production
+
+For each issue: severity, what to upgrade to, breaking changes to watch for.</code></pre>
+
+            <h2>Infrastructure Security</h2>
+
+            <pre><code>Audit this server/deployment configuration:
+
+[paste nginx config, docker-compose, k8s manifest, etc.]
+
+Check:
+1. TLS configuration (version, ciphers, HSTS)
+2. Security headers (CSP, X-Frame, X-Content-Type)
+3. CORS policy (too permissive?)
+4. Rate limiting (present? configured?)
+5. Secrets in config files (API keys, passwords)
+6. Default credentials
+7. Debug mode in production
+8. Unnecessary open ports
+9. Non-root user for services
+10. Log sanitization (no sensitive data in logs)</code></pre>
+
+            <h2>The Pattern</h2>
+
+            <p>All effective security prompts share three traits:</p>
+
+            <ol>
+                <li><strong>Specific checklist.</strong> Don't say "check for security issues." List exactly what to check.</li>
+                <li><strong>Proof required.</strong> "Show the vulnerable line and a malicious input" prevents false positives.</li>
+                <li><strong>Fix included.</strong> Every finding must come with remediation code, not just a warning.</li>
+            </ol>
+
+            <h2>MCP Servers for Security</h2>
+
+            <p>Combine AI prompts with MCP tools for deeper analysis:</p>
+
+            <ul>
+                <li><strong>mcp-api-tools</strong> — Check security headers on your live endpoints</li>
+                <li><strong>mcp-npm-tools</strong> — Audit dependencies for vulnerabilities</li>
+                <li><strong>mcp-docker-tools</strong> — Analyze Dockerfiles for security best practices</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>30 Security & AppSec Prompts</h3>
+                <p>Code audits, infrastructure hardening, pentesting, incident response, secure development, compliance. Each prompt battle-tested.</p>
+                <a href="https://github.com/rog0x/security-prompts">Get Security Prompts ($11.99)</a>
+            </div>
+
+            <p>Security isn't optional. With AI, it doesn't have to be expensive either. Run these audits before every release — your users will thank you.</p>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
