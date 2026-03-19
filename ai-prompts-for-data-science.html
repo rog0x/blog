@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35 AI Prompts That Make Data Science 10x Faster | rog0x</title>
+    <meta name="description" content="AI prompts for data science: EDA, visualization, ML model selection, SQL optimization, hypothesis testing, A/B tests. Copy-paste ready for pandas, sklearn, SQL.">
+    <meta name="keywords" content="AI prompts data science, ChatGPT data science, Claude data analysis, ML prompts, SQL prompts, statistics AI">
+    <link rel="canonical" href="https://rog0x-blog.vercel.app/ai-prompts-for-data-science.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul, article ol { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>35 AI Prompts That Make Data Science 10x Faster</h1>
+            <div class="meta">March 19, 2026 &middot; 7 min read &middot; <span class="tag">Data Science</span><span class="tag">AI</span><span class="tag">Python</span></div>
+
+            <p>Data scientists spend 60-80% of their time on data cleaning, exploration, and repetitive analysis. AI can handle most of that — if you give it the right instructions.</p>
+
+            <p>Here are the prompt patterns that actually work for data science workflows.</p>
+
+            <h2>Exploratory Data Analysis</h2>
+
+            <p>The first thing you do with any dataset: understand what you're working with.</p>
+
+            <pre><code>Analyze this dataset:
+
+Columns: [paste column names and types]
+Sample rows: [paste 5-10 rows]
+Size: [row count]
+
+Give me:
+1. Summary statistics for numeric columns
+2. Missing value analysis (count and percentage per column)
+3. Potential data quality issues
+4. Suggested data types corrections
+5. Initial hypotheses worth exploring
+6. Recommended visualizations
+
+Write the pandas code for each step.</code></pre>
+
+            <p>This single prompt replaces 30 minutes of manual exploration. The key is including sample rows — without them, AI guesses instead of analyzes.</p>
+
+            <h2>Handling Missing Data</h2>
+
+            <pre><code>I have missing values in my dataset:
+
+[paste df.isnull().sum() output]
+
+For each column with missing values:
+1. Is it MCAR, MAR, or MNAR? (explain reasoning)
+2. Recommended imputation strategy
+3. Python code to implement it
+4. How to validate the imputation didn't introduce bias
+
+Columns I cannot afford to lose:
+[list critical columns]</code></pre>
+
+            <h2>Choosing the Right ML Model</h2>
+
+            <pre><code>Help me choose an ML model:
+
+Task: [classification / regression / clustering / etc.]
+Target variable: [name and type]
+Features: [number and types]
+Dataset size: [rows]
+Key requirement: [accuracy / interpretability / speed]
+
+Compare 3-5 suitable models:
+- Why this model fits the problem
+- Pros and cons for my specific case
+- Expected performance range
+- Hyperparameters to tune first
+- sklearn code to train and evaluate
+
+Start with the simplest model that might work.</code></pre>
+
+            <p>The "start with the simplest" instruction prevents AI from suggesting neural networks for a 1000-row tabular dataset.</p>
+
+            <h2>SQL Query Optimization</h2>
+
+            <pre><code>Optimize this SQL query:
+
+[paste query]
+
+Table sizes: [approximate row counts]
+Current execution time: [time]
+Target: [target time]
+
+Analyze:
+1. Why is it slow? (identify bottlenecks)
+2. Optimized query with explanation of changes
+3. Recommended indexes
+4. Execution plan analysis
+5. Alternative approaches (CTEs, temp tables, materialized views)</code></pre>
+
+            <h2>A/B Test Analysis</h2>
+
+            <pre><code>Analyze this A/B test:
+
+Control: [sample size, conversion rate or metric]
+Treatment: [sample size, conversion rate or metric]
+Duration: [days]
+Metric: [what we're measuring]
+
+Calculate:
+1. Statistical significance (p-value)
+2. Confidence interval for the difference
+3. Effect size (Cohen's d or relative lift)
+4. Required sample size if we wanted to detect this effect
+5. Recommendation: ship, iterate, or kill
+
+Python code using scipy.stats.
+Also check: was the sample size sufficient? Any signs of peeking bias?</code></pre>
+
+            <h2>The Pattern That Makes It Work</h2>
+
+            <p>Notice what all these prompts have in common:</p>
+
+            <ol>
+                <li><strong>Context first</strong> — paste the actual data, not a description</li>
+                <li><strong>Numbered outputs</strong> — AI follows structured instructions better</li>
+                <li><strong>Code requested</strong> — "write the pandas code" not "explain how"</li>
+                <li><strong>Constraints</strong> — "simplest model", "under 200 words", specific columns</li>
+            </ol>
+
+            <p>Vague prompts get vague answers. Structured prompts get production-ready code.</p>
+
+            <div class="cta-box">
+                <h3>35 Ready-to-Use Data Science Prompts</h3>
+                <p>Exploration, visualization, ML model selection, SQL optimization, hypothesis testing, A/B tests, time series forecasting, and more. Each with variables and examples.</p>
+                <a href="https://github.com/rog0x/data-science-prompts">Get Data Science Prompts ($11.99)</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
