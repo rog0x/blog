@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps with AI: Prompts for CI/CD, Docker, Kubernetes, and Monitoring | rog0x</title>
+    <meta name="description" content="AI prompts for DevOps engineers: CI/CD pipelines, Docker optimization, Kubernetes deployment, monitoring setup, incident response. Ready-to-use templates.">
+    <meta name="keywords" content="DevOps AI prompts, CI/CD AI, Docker AI, Kubernetes AI, monitoring prompts, infrastructure as code">
+    <link rel="canonical" href="https://rog0x-blog.vercel.app/devops-with-ai-prompts.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul, article ol { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>DevOps with AI: Prompts for CI/CD, Docker, Kubernetes, and Monitoring</h1>
+            <div class="meta">March 19, 2026 &middot; 8 min read &middot; <span class="tag">DevOps</span><span class="tag">AI</span><span class="tag">Docker</span></div>
+
+            <p>DevOps is configuration-heavy. CI/CD pipelines, Dockerfiles, Kubernetes manifests, monitoring rules, incident runbooks — all of it is repetitive enough that AI can generate 80% of it, and important enough that the last 20% needs your expertise.</p>
+
+            <p>Here's how to use AI prompts effectively for DevOps work.</p>
+
+            <h2>CI/CD Pipelines</h2>
+
+            <p>The prompt pattern that generates production-ready pipelines:</p>
+
+            <pre><code>Create a GitHub Actions CI/CD pipeline for a [FRAMEWORK] app:
+
+On push to feature branch:
+  Lint → Test → Build → Deploy to preview
+
+On merge to main:
+  Full tests → Build → Deploy staging →
+  Smoke tests → Manual approval → Deploy production
+
+Include:
+- Dependency caching
+- Parallel test execution
+- Slack notification on failure
+- Rollback procedure</code></pre>
+
+            <p>The key is specifying the workflow triggers AND the deployment targets. Without both, AI generates a half-pipeline that only builds but doesn't deploy.</p>
+
+            <h2>Dockerfile Optimization</h2>
+
+            <pre><code>Optimize this Dockerfile for production:
+
+[paste Dockerfile]
+
+Check for:
+1. Multi-stage build (separate build from runtime)
+2. Layer caching (most-changing layers last)
+3. Non-root user
+4. .dockerignore exists
+5. Minimal base image (alpine or distroless)
+6. No secrets in the image
+7. Health check instruction
+8. Proper signal handling (SIGTERM)
+
+Target: under 100MB final image for Node.js,
+under 50MB for Go.</code></pre>
+
+            <p>AI is excellent at Dockerfile optimization because the best practices are well-documented and consistent. It catches things humans miss — like forgetting to add a non-root user or copying node_modules into the final stage.</p>
+
+            <h2>Kubernetes Deployments</h2>
+
+            <pre><code>Create Kubernetes manifests for [APP_NAME]:
+
+- 3 replicas, rolling update
+- Resource limits (CPU: 500m, Memory: 512Mi)
+- Liveness and readiness probes
+- HPA (scale on 70% CPU, min 2, max 10)
+- ConfigMap for app config
+- Secret for credentials
+- Ingress with TLS
+- Network policy (only allow from frontend namespace)
+
+Output: YAML manifests + Helm chart.</code></pre>
+
+            <h2>Monitoring Setup</h2>
+
+            <pre><code>Set up monitoring for [APPLICATION]:
+
+Metrics to track:
+1. Request rate, error rate, duration (RED)
+2. CPU, memory, disk usage
+3. Database connection pool
+4. Custom: [your business metrics]
+
+Alerts:
+- Error rate > 5% for 5 min → Critical
+- p99 latency > 2s → Warning
+- Disk > 80% → Warning
+- Health check failing → Critical
+
+Dashboard: Grafana with 4 panels.
+Alert channel: Slack.
+Tool: Prometheus + Grafana.</code></pre>
+
+            <h2>Incident Response</h2>
+
+            <pre><code>Create an incident response runbook for [SERVICE]:
+
+Severity levels:
+- P1: service down (15 min response)
+- P2: degraded (30 min response)
+- P3: minor issue (4 hour response)
+
+For each severity:
+1. Who gets paged
+2. First diagnostic steps (what to check)
+3. Rollback procedure
+4. Communication template for users
+5. Post-mortem template</code></pre>
+
+            <h2>Infrastructure as Code</h2>
+
+            <pre><code>Write Terraform for:
+
+- VPC with public/private subnets
+- ECS Fargate service for [APP]
+- RDS PostgreSQL (Multi-AZ)
+- ElastiCache Redis
+- ALB with TLS
+- CloudWatch alarms
+
+Separate environments: dev, staging, prod.
+Use modules for reusable components.
+Include cost estimation.</code></pre>
+
+            <h2>MCP Servers for DevOps</h2>
+
+            <p>Beyond prompts, you can give your AI agent direct access to DevOps tools through MCP servers:</p>
+
+            <ul>
+                <li><strong>mcp-docker-tools</strong> — Analyze Dockerfiles, inspect containers, view logs</li>
+                <li><strong>mcp-git-tools</strong> — Commit history, diffs, blame, branch analysis</li>
+                <li><strong>mcp-api-tools</strong> — HTTP health checks, JWT debugging, security headers</li>
+                <li><strong>mcp-env-tools</strong> — Environment validation, port checking, system info</li>
+                <li><strong>mcp-file-tools</strong> — Directory analysis, duplicate finder, code counter</li>
+            </ul>
+
+            <p>All free and open source: <a href="https://github.com/rog0x">github.com/rog0x</a></p>
+
+            <div class="cta-box">
+                <h3>35 DevOps & Infrastructure Prompts</h3>
+                <p>CI/CD pipelines, Docker optimization, Kubernetes, Terraform, monitoring, incident response, security hardening. Each with variables and real examples.</p>
+                <a href="https://github.com/rog0x/devops-prompts">Get DevOps Prompts ($11.99)</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
