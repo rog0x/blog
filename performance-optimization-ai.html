@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Optimization with AI: Find and Fix Bottlenecks Faster | rog0x</title>
+    <meta name="description" content="Use AI to find and fix performance bottlenecks: profiling, Big O analysis, memory leaks, bundle optimization, load testing. Prompts and MCP tools included.">
+    <meta name="keywords" content="performance optimization AI, profiling AI prompts, Big O analysis, memory leak AI, bundle optimization, load testing">
+    <link rel="canonical" href="https://rog0x-blog.vercel.app/performance-optimization-ai.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>Performance Optimization with AI</h1>
+            <div class="meta">March 20, 2026 &middot; 6 min read &middot; <span class="tag">Performance</span><span class="tag">AI</span><span class="tag">Optimization</span></div>
+
+            <p>Most performance problems aren't hard to fix. They're hard to find. AI changes the equation — it can analyze code, estimate complexity, and suggest optimizations in seconds.</p>
+
+            <h2>The Optimization Framework</h2>
+
+            <p>Rule #1: Never optimize without measuring. The order matters:</p>
+
+            <ol>
+                <li><strong>Measure</strong> — establish baseline with precise numbers</li>
+                <li><strong>Profile</strong> — find where time is actually spent</li>
+                <li><strong>Fix</strong> — change the bottleneck (not what you guess is slow)</li>
+                <li><strong>Verify</strong> — measure again, confirm improvement</li>
+            </ol>
+
+            <h2>Finding Bottlenecks with AI</h2>
+
+            <pre><code>Profile this code and identify the top 3 bottlenecks:
+
+[paste code]
+
+For each bottleneck:
+1. Which line/function is slow and why
+2. Is it CPU-bound, I/O-bound, or memory-bound?
+3. What percentage of total time does it consume?
+4. The fix (with code)
+5. Expected improvement
+
+Rule: Optimize based on measurements, not assumptions.</code></pre>
+
+            <h2>Big O Analysis</h2>
+
+            <p>The fastest way to find performance problems is complexity analysis:</p>
+
+            <pre><code>Analyze the time and space complexity of each function:
+
+[paste code]
+
+For each function:
+- Time complexity (Big O)
+- Space complexity
+- What input size makes this slow?
+- Can we do better? What's the optimal complexity for this problem?</code></pre>
+
+            <p>An O(n^2) hidden in a loop is the #1 cause of slow applications. AI spots these instantly.</p>
+
+            <h2>Memory Leak Detection</h2>
+
+            <pre><code>Find potential memory leaks in this code:
+
+[paste code]
+
+Common sources:
+- Event listeners not removed
+- Closures holding large objects
+- Caches without size limits
+- Timers not cleared
+- Growing arrays/maps
+- Database connection leaks
+
+For each: location, why it leaks, the fix.</code></pre>
+
+            <h2>MCP Tools for Performance</h2>
+
+            <p>Beyond prompts, MCP servers can analyze performance directly:</p>
+
+            <ul>
+                <li><strong>mcp-perf-tools</strong> — benchmark code, analyze memory, estimate Big O, check bundle size, run load tests</li>
+                <li><strong>mcp-lint-tools</strong> — find complexity issues, dead code, unnecessary imports</li>
+                <li><strong>mcp-file-tools</strong> — count lines of code, find large files</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>Performance Tools</h3>
+                <p>MCP Performance Tools (free) + Claude Code Prompts with performance profiling templates ($9.99).</p>
+                <a href="https://github.com/rog0x/mcp-perf-tools">Get MCP Perf Tools (Free)</a>
+            </div>
+
+            <p>The best optimization is the one you don't need — write efficient code from the start. But when you need to fix slow code, AI + MCP tools get you there in minutes instead of hours.</p>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
