@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompts for Cybersecurity: Code Review, Threat Modeling, Incident Response | rog0x</title>
+    <meta name="description" content="30 AI prompts for security professionals: OWASP code review, threat modeling with STRIDE, incident response, compliance auditing, defensive architecture.">
+    <meta name="keywords" content="AI cybersecurity prompts, security code review, threat modeling, incident response AI, OWASP AI prompts">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ol, article ul { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>AI Prompts for Cybersecurity Professionals</h1>
+            <div class="meta">March 20, 2026 &middot; 4 min read &middot; <span class="tag">Security</span><span class="tag">AI</span><span class="tag">Prompts</span></div>
+
+            <p>Security teams are understaffed everywhere. AI won't replace security engineers, but it dramatically accelerates code review, threat modeling, and incident response. The right prompts turn Claude into a security co-pilot.</p>
+
+            <h2>Security Code Review</h2>
+
+            <p>Manual code review catches about 25% of vulnerabilities. AI-assisted review catches 60-80% — not because it's smarter, but because it doesn't get tired and checks every input path. The key is structured prompts that focus on specific vulnerability classes:</p>
+
+            <ul>
+                <li><strong>Injection flaws</strong> — SQL injection, command injection, LDAP injection. Have AI trace every user input to where it's used in queries or commands.</li>
+                <li><strong>Authentication</strong> — session management, token handling, password storage. AI can verify bcrypt/argon2 usage, check session timeouts, spot JWT misconfiguration.</li>
+                <li><strong>Authorization</strong> — IDOR, privilege escalation, missing access controls. AI maps every endpoint to its required permissions.</li>
+            </ul>
+
+            <h2>Threat Modeling with STRIDE</h2>
+
+            <p>Feed AI your architecture diagram (or describe it) and ask for STRIDE analysis: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege. For each component and data flow, it identifies potential threats and mitigations.</p>
+
+            <p>This turns a half-day workshop into a 30-minute review. The AI output isn't final — it's a starting point that catches the obvious threats so your team can focus on the subtle ones.</p>
+
+            <h2>Incident Response</h2>
+
+            <p>During an incident, speed matters. Pre-built prompts for triage ("Given these logs, identify the attack vector"), containment ("What should we block/disable first"), and communication ("Draft an incident notification for customers") save critical minutes.</p>
+
+            <h2>Compliance Auditing</h2>
+
+            <p>CIS benchmarks, SOC 2, PCI DSS — AI can review configurations against compliance frameworks. Feed it your cloud config or security policies, ask it to identify gaps. It won't catch everything, but it handles the repetitive checklist work so your team focuses on judgment calls.</p>
+
+            <div class="cta-box">
+                <h3>Cybersecurity Prompts — $6.99</h3>
+                <p>30 prompts: code review for OWASP top 10, STRIDE threat modeling, incident response, compliance auditing, defensive architecture, CTF methodology.</p>
+                <a href="https://landing-site-virid-ten.vercel.app/checkout.html">Buy Now</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
