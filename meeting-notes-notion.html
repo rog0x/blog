@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Never Lose a Meeting Action Item Again: Notion Meeting Notes System | rog0x</title>
-    <meta name="description" content="Structured meeting notes in Notion: linked action items, decision log, templates for standups, 1:1s, and retrospectives. Every meeting produces results.">
-    <meta name="keywords" content="Notion meeting notes, action item tracker, decision log, meeting template, standup template Notion">
+    <title>How to Take Meeting Notes in Notion That Actually Get Used | rog0x</title>
+    <meta name="description" content="Learn a proven 4-part structure for meeting notes in Notion — capture decisions, track action items with owners and deadlines, and ensure follow-through after every meeting.">
+    <meta name="keywords" content="meeting notes Notion, Notion meeting template, action items tracking, meeting notes system, standup template Notion, 1:1 meeting notes, team sync template, retrospective Notion, productive meetings, Notion productivity">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
@@ -21,7 +21,7 @@
         .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
         article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
         article p { margin-bottom: 16px; color: #d4d4d8; }
-        article ul { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article ol, article ul { margin: 0 0 16px 24px; color: #d4d4d8; }
         article li { margin-bottom: 6px; }
         article a { color: var(--accent); }
         .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
@@ -44,51 +44,64 @@
             </nav>
         </div>
     </header>
-
     <div class="container">
         <article>
-            <a href="/" class="back">&larr; Back to all posts</a>
-            <h1>Never Lose a Meeting Action Item Again</h1>
-            <div class="meta">March 20, 2026 &middot; 4 min read &middot; <span class="tag">Notion</span><span class="tag">Meetings</span><span class="tag">Productivity</span></div>
+            <a href="/blog" class="back">&larr; Back to blog</a>
+            <span class="tag">Notion</span>
+            <span class="tag">Productivity</span>
+            <span class="tag">Meetings</span>
+            <h1>How to Take Meeting Notes in Notion That Actually Get Used</h1>
+            <p class="meta">March 20, 2026 &middot; 3 min read</p>
 
-            <p>The average professional spends 31 hours per month in meetings. Most produce notes that nobody reads, action items that nobody tracks, and decisions that get re-debated a month later.</p>
+            <p>You leave a meeting, open the shared doc two days later, and find a wall of half-finished bullet points no one has looked at since. Sound familiar? The problem is rarely effort — it is structure. Here is how to build a meeting notes system in Notion that people actually revisit, reference, and act on.</p>
 
-            <p>Fix that with one Notion system: meetings → action items → decisions. All linked.</p>
-
-            <h2>The Problem with Meeting Notes</h2>
+            <h2>Why Most Meeting Notes Fail</h2>
+            <p>The default approach to meeting notes is to transcribe everything as it happens: who said what, in roughly the order they said it. The result is a document that mirrors the chaos of the conversation rather than distilling it into something useful.</p>
+            <p>Three patterns kill meeting notes every time:</p>
             <ul>
-                <li>Written in a Google Doc that gets lost</li>
-                <li>Action items buried in paragraph text</li>
-                <li>No tracking of who does what by when</li>
-                <li>Decisions made but not recorded — re-debated later</li>
+                <li><strong>Transcript syndrome</strong> — writing down everything without distinguishing signal from noise. Two pages of verbatim notes hide the one decision that actually matters.</li>
+                <li><strong>No structure</strong> — when every meeting produces a freeform doc, there is no consistent place to look for decisions or tasks. People stop checking.</li>
+                <li><strong>No follow-up loop</strong> — if action items live only inside the meeting page and never surface again, they are forgotten by the next morning.</li>
             </ul>
+            <p>Good meeting notes are not a record of the conversation. They are a trigger for what happens next.</p>
 
-            <h2>The Solution</h2>
+            <h2>The 4-Part Structure</h2>
+            <p>Every meeting note in your Notion workspace should capture exactly four things. No more, no less.</p>
+            <ol>
+                <li><strong>Decisions</strong> — what was agreed upon. Write these as clear, declarative statements: "We will launch the beta on April 5" rather than "Discussed launch timing." If a meeting produced no decisions, that is worth noting too.</li>
+                <li><strong>Action items (owner + deadline)</strong> — every task needs a name next to it and a date attached. "Update the pricing page" is useless. "Sarah updates the pricing page by March 25" is accountable. Use Notion's person and date properties so these become filterable.</li>
+                <li><strong>Context</strong> — the minimum background someone needs to understand the decisions and actions without having attended the meeting. Keep this short — three to five sentences covering the problem, constraints discussed, and options that were rejected.</li>
+                <li><strong>Next steps</strong> — when is the follow-up? What needs to be true before the next meeting? This closes the loop and prevents the meeting from becoming an isolated event.</li>
+            </ol>
+            <p>This structure works because it forces clarity during the meeting itself. If you cannot fill in a section, the meeting probably did not achieve what it needed to.</p>
 
-            <p><strong>Meeting database</strong> — every meeting: date, type, attendees, agenda, notes. Calendar view shows the week. Table view lets you search.</p>
-
-            <p><strong>Action items</strong> — linked to the meeting they came from. Owner, deadline, status. Board view shows what's to do, in progress, and done. Overdue filter shows what fell through the cracks.</p>
-
-            <p><strong>Decision log</strong> — linked to the meeting. Context, options considered, what was decided, who decided. Six months later when someone asks "why did we choose Postgres?" — you have the answer.</p>
-
-            <h2>Templates That Save Time</h2>
-
-            <p>Pre-built templates for common meeting types:</p>
+            <h2>Meeting Templates</h2>
+            <p>Different meetings need different templates, but they should all follow the 4-part structure above. Here are five templates that cover most teams:</p>
             <ul>
-                <li><strong>Standup:</strong> Yesterday / Today / Blockers</li>
-                <li><strong>1:1:</strong> How are you / Progress / Challenges / Feedback / Actions</li>
-                <li><strong>Team sync:</strong> Updates / Metrics / Blockers / Announcements</li>
-                <li><strong>Retrospective:</strong> Went well / Improve / Actions</li>
+                <li><strong>Daily Standup (5 min)</strong> — three fields per person: done yesterday, doing today, blockers. Action items auto-link to the relevant project. No context section needed — this meeting is pure signal.</li>
+                <li><strong>1:1 Meeting (30 min)</strong> — agenda set by the report before the meeting. Sections for wins, challenges, feedback, and career topics. Action items split between manager and report with clear owners.</li>
+                <li><strong>Team Sync</strong> — project status updates with a traffic-light system (green, yellow, red). Decisions section is front and center. Discussion items are time-boxed with a visible timer property.</li>
+                <li><strong>Retrospective</strong> — three columns: what went well, what did not, what to change. Each "what to change" item becomes an action item with an owner. A linked database tracks whether retro actions actually get implemented across sprints.</li>
+                <li><strong>Client Call</strong> — attendees, client requests, commitments made, and internal-only notes (hidden from shared views). Action items are tagged as client-facing or internal so nothing slips through the cracks.</li>
             </ul>
+            <p>Store all templates in a single Notion database with a "Type" property. When you start a new meeting, select the type and the template auto-populates.</p>
+
+            <h2>Action Item Tracking</h2>
+            <p>The real power of meeting notes in Notion comes from treating action items as a connected system rather than text buried inside pages.</p>
+            <ul>
+                <li><strong>Link items to meetings</strong> — every action item lives in a dedicated database with a relation back to the meeting that created it. This gives you full traceability: click any task and see exactly where and why it was assigned.</li>
+                <li><strong>Filter by owner</strong> — create a personal view that shows only your action items across all meetings. This replaces the habit of searching through multiple docs to figure out what you owe people.</li>
+                <li><strong>Highlight overdue items</strong> — use a formula property that compares the deadline to today's date. Overdue items get a red indicator. Add a board view grouped by status (to do, in progress, done) so nothing hides in a long list.</li>
+            </ul>
+            <p>Set a recurring reminder — every Monday morning, review the action items database filtered to your name. Five minutes of review prevents a week of missed commitments.</p>
 
             <div class="cta-box">
                 <h3>Meeting Notes System — $7.99</h3>
-                <p>4 connected pages: meetings, action items, decisions, dashboard. Templates for standup, 1:1, sync, retro.</p>
-                <a href="https://landing-site-virid-ten.vercel.app/checkout.html">Buy Now</a>
+                <p>A complete Notion workspace with all five meeting templates, a linked action items database, overdue tracking formulas, and personal dashboard views. Duplicate it into your workspace and start running better meetings today.</p>
+                <a href="https://landing-site-virid-ten.vercel.app/checkout.html">Get the Template</a>
             </div>
         </article>
     </div>
-
     <footer>
         <div class="container">
             <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
