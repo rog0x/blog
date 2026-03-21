@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Engineering for Developers: Complete Guide 2026 | rog0x</title>
+    <meta name="description" content="Master AI prompt engineering for software development. Learn patterns, techniques, and real examples for Claude Code, GPT, and other AI coding assistants.">
+    <meta name="keywords" content="ai prompt engineering, developer prompts, claude code prompts, prompt engineering guide, ai coding prompts 2026">
+    <link rel="canonical" href="https://blog-theta-eight-85.vercel.app/ai-prompt-engineering-guide-2026.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article h3 { font-size: 1.15rem; margin: 24px 0 8px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul, article ol { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>AI Prompt Engineering for Developers: Complete Guide 2026</h1>
+            <div class="meta">March 21, 2026 &middot; 10 min read &middot; <span class="tag">AI</span><span class="tag">Prompts</span><span class="tag">Development</span></div>
+
+            <p>The difference between a developer who uses AI effectively and one who doesn't comes down to one skill: prompt engineering. Not the buzzword &mdash; the actual practice of giving AI assistants the right context, constraints, and examples to get useful output.</p>
+
+            <p>This guide covers practical prompt engineering patterns for software development. Real examples, not theory.</p>
+
+            <h2>The 5 Core Patterns</h2>
+
+            <h3>1. Role + Context + Task</h3>
+            <p>The most reliable pattern. Tell the AI who it is, what it's looking at, and what you need.</p>
+
+            <pre><code>You are a senior TypeScript developer reviewing a pull request.
+
+Context: This is a Node.js API server using Express and Prisma ORM.
+The codebase follows clean architecture with controllers, services,
+and repositories.
+
+Task: Review this function for bugs, performance issues, and
+security vulnerabilities. Focus on SQL injection risks and
+error handling.
+
+[paste code here]</code></pre>
+
+            <p>Why it works: the role sets expertise level, context eliminates guessing, and the task narrows the output to what you actually need.</p>
+
+            <h3>2. Example-Driven (Few-Shot)</h3>
+            <p>Show the AI what you want by example. This is the most powerful technique for getting consistent output format.</p>
+
+            <pre><code>Convert these API endpoints to TypeScript interfaces.
+
+Example input:
+GET /users/:id -> { id: number, name: string, email: string }
+
+Example output:
+interface GetUserResponse {
+  id: number;
+  name: string;
+  email: string;
+}
+
+Now convert these:
+POST /users -> { id: number, name: string, email: string, createdAt: string }
+GET /users/:id/posts -> { posts: Array<{ id: number, title: string }> }
+DELETE /users/:id -> { success: boolean }</code></pre>
+
+            <h3>3. Constraint-Based</h3>
+            <p>Tell the AI what NOT to do. Constraints prevent the most common failure modes.</p>
+
+            <pre><code>Write a React component for a data table.
+
+Constraints:
+- No external dependencies (no material-ui, no ag-grid)
+- Must support sorting by clicking column headers
+- Must handle empty state
+- TypeScript with strict mode
+- No inline styles — use CSS modules
+- Do NOT add pagination (we'll add it later)
+- Maximum 150 lines of code</code></pre>
+
+            <h3>4. Chain of Thought</h3>
+            <p>For complex problems, ask the AI to think step by step before writing code.</p>
+
+            <pre><code>I need to migrate our authentication from JWT stored in
+localStorage to httpOnly cookies.
+
+Before writing any code:
+1. List all files that currently handle JWT tokens
+2. Identify the security risks of each approach
+3. Outline the migration steps
+4. Note any breaking changes for the frontend
+
+Then implement step 1 of the migration.</code></pre>
+
+            <h3>5. Iterative Refinement</h3>
+            <p>Start broad, then narrow. Don't try to get everything perfect in one prompt.</p>
+
+            <pre><code># Round 1: Architecture
+"Design the database schema for a multi-tenant SaaS app
+with teams, roles, and permissions."
+
+# Round 2: Specific table
+"Now detail the permissions table. We need resource-level
+permissions (not just role-based). Show me the Prisma schema."
+
+# Round 3: Edge case
+"How does this handle the case where a user belongs to
+multiple teams with different permission levels?"</code></pre>
+
+            <h2>Developer-Specific Prompt Patterns</h2>
+
+            <h3>Code Review Prompt</h3>
+            <pre><code>Review this code for:
+1. Bugs (logic errors, off-by-one, null checks)
+2. Performance (N+1 queries, unnecessary re-renders, memory leaks)
+3. Security (injection, XSS, auth bypasses)
+4. Maintainability (naming, complexity, duplication)
+
+Rate severity: critical / warning / suggestion
+Format: file:line — [severity] description
+
+[paste code]</code></pre>
+
+            <h3>Test Generation Prompt</h3>
+            <pre><code>Write unit tests for this function using Jest.
+
+Requirements:
+- Test happy path and edge cases
+- Test error handling (what happens with null, undefined, empty)
+- Use descriptive test names that explain the behavior
+- Mock external dependencies
+- Aim for >90% branch coverage
+
+Function:
+[paste code]</code></pre>
+
+            <h3>Debug Prompt</h3>
+            <pre><code>This function should [expected behavior] but instead [actual behavior].
+
+Environment: Node.js 20, TypeScript 5.4, PostgreSQL 16
+Error message: [paste error]
+Stack trace: [paste trace]
+
+Steps to reproduce:
+1. [step]
+2. [step]
+
+What I've already tried:
+- [attempt 1]
+- [attempt 2]
+
+What's causing this?</code></pre>
+
+            <h3>Architecture Decision Prompt</h3>
+            <pre><code>I need to choose between [Option A] and [Option B] for [specific need].
+
+Context:
+- Team size: [N] developers
+- Current stack: [tech]
+- Scale: [users/requests]
+- Timeline: [weeks/months]
+
+Compare on: performance, developer experience, maintenance cost,
+learning curve, and ecosystem maturity.
+
+Give a recommendation with reasoning.</code></pre>
+
+            <h2>Common Mistakes</h2>
+
+            <ol>
+                <li><strong>Too vague:</strong> "Write me a login page" → No context about tech stack, auth method, or design requirements</li>
+                <li><strong>Too much at once:</strong> Asking for a full-stack app in one prompt → Break it into pieces</li>
+                <li><strong>No examples:</strong> Expecting the AI to guess your preferred code style → Show one example</li>
+                <li><strong>Ignoring context window:</strong> Pasting an entire codebase → Focus on the relevant files</li>
+                <li><strong>Not iterating:</strong> Accepting the first output → Refine and improve</li>
+            </ol>
+
+            <h2>Prompt Libraries Save Time</h2>
+
+            <p>Building a library of reusable prompts for your common tasks is the highest-leverage investment. Instead of crafting a new prompt each time, you pull from a tested collection.</p>
+
+            <p>A good prompt library covers:</p>
+            <ul>
+                <li><strong>Code generation</strong> — Components, APIs, database queries</li>
+                <li><strong>Code review</strong> — Security, performance, style</li>
+                <li><strong>Testing</strong> — Unit tests, integration tests, E2E</li>
+                <li><strong>Documentation</strong> — READMEs, API docs, inline comments</li>
+                <li><strong>DevOps</strong> — Dockerfiles, CI/CD, infrastructure</li>
+                <li><strong>Architecture</strong> — System design, database schema, API design</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>700+ Developer Prompts — Ready to Use</h3>
+                <p>Pre-built prompt packs for Claude Code, GPT, and any AI assistant. Covering frontend, backend, DevOps, data science, security, and more. Tested and refined.</p>
+                <a href="https://landing-site-virid-ten.vercel.app/#prompt-packs">Browse Prompt Packs</a>
+            </div>
+
+            <h2>Using Prompts with MCP Servers</h2>
+
+            <p>Prompts become even more powerful when combined with <a href="/claude-code-mcp-setup-guide.html">MCP servers</a>. Instead of asking the AI to imagine data, give it real access:</p>
+
+            <pre><code># Instead of: "Review this API for performance"
+# Use MCP web-tools to actually test the API:
+
+"Use web_extract to fetch https://api.example.com/health
+and web_monitor to measure response time. Then analyze
+the response headers for caching issues."</code></pre>
+
+            <pre><code># Instead of: "Generate tests for this function"
+# Use MCP testing-tools with real code:
+
+"Use the test generation tool to create Jest tests
+for src/services/auth.ts. Focus on edge cases."</code></pre>
+
+            <p>MCP servers turn prompts from theoretical to practical. The AI works with real data instead of guessing.</p>
+
+            <h2>Related Resources</h2>
+            <ul>
+                <li><a href="/best-claude-code-prompts.html">Best Claude Code Prompts</a></li>
+                <li><a href="/claude-code-mcp-setup-guide.html">How to Set Up MCP Servers in Claude Code</a></li>
+                <li><a href="/best-mcp-servers-2026.html">12 Best Free MCP Servers for 2026</a></li>
+                <li><a href="/automate-workflows-with-ai.html">Automate Workflows with AI</a></li>
+                <li><a href="/all-prompt-packs-overview.html">All Prompt Packs Overview</a></li>
+            </ul>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
