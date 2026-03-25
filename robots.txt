@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://blog-theta-eight-85.vercel.app/sitemap.xml
+RSS: https://blog-theta-eight-85.vercel.app/feed.xml

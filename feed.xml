@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>rog0x Blog — MCP Servers, AI Prompts, Developer Productivity</title>
+  <link>https://blog-theta-eight-85.vercel.app</link>
+  <description>Guides and tutorials on MCP servers, AI prompts for developers, Notion templates, and automation workflows.</description>
+  <language>en</language>
+  <lastBuildDate>Tue, 25 Mar 2026 00:00:00 +0000</lastBuildDate>
+  <atom:link href="https://blog-theta-eight-85.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
+
+  <item>
+    <title>How to Set Up MCP Servers in Claude Code: Complete 2026 Guide</title>
+    <link>https://blog-theta-eight-85.vercel.app/claude-code-mcp-setup-guide.html</link>
+    <description>Step-by-step guide to installing and configuring MCP servers in Claude Code and Claude Desktop.</description>
+    <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/claude-code-mcp-setup-guide.html</guid>
+  </item>
+  <item>
+    <title>AI Prompt Engineering for Developers: Complete Guide 2026</title>
+    <link>https://blog-theta-eight-85.vercel.app/ai-prompt-engineering-guide-2026.html</link>
+    <description>Master prompt engineering for software development. 5 core patterns, developer-specific templates.</description>
+    <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/ai-prompt-engineering-guide-2026.html</guid>
+  </item>
+  <item>
+    <title>15 Best Notion Templates for Developers in 2026</title>
+    <link>https://blog-theta-eight-85.vercel.app/notion-templates-for-developers-2026.html</link>
+    <description>Developer hub, freelancer OS, project manager, interview prep, and more.</description>
+    <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/notion-templates-for-developers-2026.html</guid>
+  </item>
+  <item>
+    <title>How We Built 67 Products in One Day with AI</title>
+    <link>https://blog-theta-eight-85.vercel.app/how-we-built-67-products-in-one-day.html</link>
+    <description>How one developer used Claude Code to build 30 MCP servers, 14 prompt packs, 21 Notion templates, 2 SaaS products, and 42 blog posts.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/how-we-built-67-products-in-one-day.html</guid>
+  </item>
+  <item>
+    <title>50 Articles, 70+ Products, One Session: The rog0x Story</title>
+    <link>https://blog-theta-eight-85.vercel.app/50-articles-milestone.html</link>
+    <description>How we built 31 MCP servers, 15 prompt packs, 22 Notion templates, 2 SaaS products, and 50 blog posts in one session.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/50-articles-milestone.html</guid>
+  </item>
+  <item>
+    <title>Install Any MCP Server in 10 Seconds: The npx Guide</title>
+    <link>https://blog-theta-eight-85.vercel.app/npx-mcp-install-guide.html</link>
+    <description>Install MCP servers for Claude Code with one command. npx @rog0x/mcp-web-tools and 24 more.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/npx-mcp-install-guide.html</guid>
+  </item>
+  <item>
+    <title>The Complete Developer Toolkit: 32 MCP Servers + 15 Prompt Packs + 27 Templates</title>
+    <link>https://blog-theta-eight-85.vercel.app/complete-developer-toolkit.html</link>
+    <description>Everything a developer needs in one place: 32 free MCP servers, 15 prompt packs, 27 Notion templates, 2 SaaS tools.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/complete-developer-toolkit.html</guid>
+  </item>
+  <item>
+    <title>AI Task Management with MCP: Priority, Estimation, Standup, Burndown</title>
+    <link>https://blog-theta-eight-85.vercel.app/task-management-mcp.html</link>
+    <description>MCP tools for task management: RICE/Eisenhower prioritization, PERT time estimation, auto standup generation.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/task-management-mcp.html</guid>
+  </item>
+  <item>
+    <title>Webhook Development Guide: Testing, Signatures, and Retry Logic</title>
+    <link>https://blog-theta-eight-85.vercel.app/webhook-development-guide.html</link>
+    <description>Complete guide to webhooks: send, receive, validate signatures, handle retries.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/webhook-development-guide.html</guid>
+  </item>
+  <item>
+    <title>Why Pay for AI Prompts When ChatGPT Is Free?</title>
+    <link>https://blog-theta-eight-85.vercel.app/why-pay-for-prompts.html</link>
+    <description>Why professional prompt packs save time and money. The difference between generic AI output and structured results.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/why-pay-for-prompts.html</guid>
+  </item>
+  <item>
+    <title>14 AI Prompt Packs: 490+ Prompts for Every Developer Role</title>
+    <link>https://blog-theta-eight-85.vercel.app/all-prompt-packs-overview.html</link>
+    <description>Complete overview of 14 prompt packs covering development, automation, freelancing, data science, DevOps, and more.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/all-prompt-packs-overview.html</guid>
+  </item>
+  <item>
+    <title>30 AI Prompts for API Development</title>
+    <link>https://blog-theta-eight-85.vercel.app/api-development-prompts-guide.html</link>
+    <description>AI prompts for backend developers: REST API design, JWT authentication, database optimization, API testing.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/api-development-prompts-guide.html</guid>
+  </item>
+  <item>
+    <title>AI Prompts for Startup Operations</title>
+    <link>https://blog-theta-eight-85.vercel.app/startup-operations-ai.html</link>
+    <description>AI prompts for startup founders: hiring, legal docs, financial models, customer onboarding, launches.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/startup-operations-ai.html</guid>
+  </item>
+  <item>
+    <title>Manage Dependencies with AI</title>
+    <link>https://blog-theta-eight-85.vercel.app/dependency-management-ai.html</link>
+    <description>AI tools for dependency management: licenses, outdated packages, dependency trees, security audit.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/dependency-management-ai.html</guid>
+  </item>
+  <item>
+    <title>Free Status Page for Your Website</title>
+    <link>https://blog-theta-eight-85.vercel.app/free-status-page.html</link>
+    <description>Free status page that monitors your website uptime and response time. No credit card required.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/free-status-page.html</guid>
+  </item>
+  <item>
+    <title>Free URL Shortener with Analytics</title>
+    <link>https://blog-theta-eight-85.vercel.app/free-url-shortener.html</link>
+    <description>Free URL shortener with click tracking. Shorten links, view click stats, no account needed.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/free-url-shortener.html</guid>
+  </item>
+  <item>
+    <title>There's a Notion Template for That: 22 Templates for Every Part of Life</title>
+    <link>https://blog-theta-eight-85.vercel.app/notion-for-everything.html</link>
+    <description>22 Notion templates covering work, health, finance, education, creativity, relationships, and more.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/notion-for-everything.html</guid>
+  </item>
+  <item>
+    <title>Run Your Small Business From Notion</title>
+    <link>https://blog-theta-eight-85.vercel.app/notion-small-business.html</link>
+    <description>Notion template for small business: client CRM, project management, invoicing, revenue tracking.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/notion-small-business.html</guid>
+  </item>
+  <item>
+    <title>Manage Social Media in Notion</title>
+    <link>https://blog-theta-eight-85.vercel.app/social-media-notion-planner.html</link>
+    <description>Content calendar, post database, hashtag library, analytics tracking in Notion.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/social-media-notion-planner.html</guid>
+  </item>
+  <item>
+    <title>The Simplest CRM: Track Contacts and Deals in Notion</title>
+    <link>https://blog-theta-eight-85.vercel.app/simple-crm-notion.html</link>
+    <description>Simple Notion CRM for solopreneurs: contacts, deal pipeline, activity log, follow-up reminders.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/simple-crm-notion.html</guid>
+  </item>
+  <item>
+    <title>Plan Any Event in Notion</title>
+    <link>https://blog-theta-eight-85.vercel.app/event-planning-notion.html</link>
+    <description>Notion event planning template: guest RSVP, vendors, schedule, budget, checklists.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/event-planning-notion.html</guid>
+  </item>
+  <item>
+    <title>Learn a Language with Notion</title>
+    <link>https://blog-theta-eight-85.vercel.app/language-learning-notion.html</link>
+    <description>Vocabulary with spaced repetition, grammar notes, study sessions, resources, level tracking.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/language-learning-notion.html</guid>
+  </item>
+  <item>
+    <title>Track Car Maintenance in Notion</title>
+    <link>https://blog-theta-eight-85.vercel.app/car-maintenance-notion.html</link>
+    <description>Maintenance log, fuel log with MPG calculator, total expenses, insurance documents. Multi-car support.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/car-maintenance-notion.html</guid>
+  </item>
+  <item>
+    <title>Start a Gratitude Journal in Notion</title>
+    <link>https://blog-theta-eight-85.vercel.app/gratitude-journal-notion.html</link>
+    <description>Daily entries, mood tracking, 100+ prompts, weekly reviews. 5 minutes a day for better wellbeing.</description>
+    <pubDate>Tue, 25 Mar 2026 00:00:00 +0000</pubDate>
+    <guid>https://blog-theta-eight-85.vercel.app/gratitude-journal-notion.html</guid>
+  </item>
+
+</channel>
+</rss>
