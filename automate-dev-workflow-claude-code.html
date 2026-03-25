@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automate Your Dev Workflow with Claude Code and MCP Servers | rog0x</title>
+    <meta name="description" content="Learn how to automate your entire development workflow using Claude Code and MCP servers. 5 practical automation recipes for code review, testing, docs, dependency auditing, and deployment checks.">
+    <meta name="keywords" content="Claude Code, MCP servers, dev workflow automation, code review automation, test generation, docs generation, dependency auditing, deployment checks, AI development tools, developer productivity 2026">
+    <link rel="canonical" href="https://rog0x.com/blog/automate-dev-workflow-claude-code">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --border: #262626;
+            --text: #fafafa;
+            --muted: #a1a1aa;
+            --accent: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 2rem 0 1rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        article h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .tags span {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        article h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 2rem 0 0.75rem;
+        }
+
+        article p {
+            margin-bottom: 1.25rem;
+            color: var(--text);
+        }
+
+        article ul, article ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        article li {
+            margin-bottom: 0.5rem;
+        }
+
+        pre {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        code {
+            font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+        }
+
+        p code {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .cta-box {
+            background: var(--surface);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            margin-top: 0;
+            color: var(--text);
+            font-size: 1.3rem;
+        }
+
+        .cta-box p {
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+            color: #fff;
+        }
+
+        .related {
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+            padding-top: 2rem;
+        }
+
+        .related h2 {
+            margin-top: 0;
+        }
+
+        .related ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .related li {
+            padding: 0.5rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            article h1 {
+                font-size: 1.75rem;
+            }
+
+            article h2 {
+                font-size: 1.3rem;
+            }
+
+            .cta-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog0x</a>
+            <nav>
+                <a href="/products">Products</a>
+                <a href="https://github.com/rog0x" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="/blog" class="back-link">&larr; Back to Blog</a>
+
+        <article>
+            <h1>Automate Your Dev Workflow with Claude Code and MCP Servers</h1>
+            <div class="meta">March 25, 2026</div>
+            <div class="tags">
+                <span>Automation</span>
+                <span>Claude Code</span>
+                <span>MCP</span>
+            </div>
+
+            <h2>Why Automate Dev Workflows in 2026</h2>
+
+            <p>The landscape of software development has shifted dramatically. In 2026, developers who still manually review every pull request line-by-line, write boilerplate tests by hand, and chase down outdated dependencies are losing hours every single day. Hours that compound into weeks and months of wasted productivity over the course of a year. The tooling has caught up with the ambition. Automation is no longer a luxury reserved for large engineering teams with dedicated DevOps staff. It is accessible to solo developers, freelancers, and small teams through the combination of Claude Code and MCP (Model Context Protocol) servers.</p>
+
+            <p>The key shift happened when MCP became the standard interface for connecting AI models to external tools. Instead of writing fragile shell scripts or maintaining complex CI/CD pipelines with dozens of integrations, you can now point Claude Code at a set of MCP servers and let it orchestrate your entire workflow. Code review, test generation, documentation, dependency management, and deployment verification all become conversational commands rather than manual chores.</p>
+
+            <p>The economics are straightforward. A developer spending 90 minutes per day on repetitive workflow tasks saves roughly 30 hours per month through automation. For a freelancer billing at $100/hour, that translates to $3,000 in recovered capacity every month. For a team of five, the math becomes even more compelling. The setup cost is measured in hours. The return is measured in months of reclaimed time.</p>
+
+            <p>What makes 2026 the inflection point is the maturity of the MCP server ecosystem. Specialized servers now exist for every phase of the development lifecycle. They are stable, well-documented, and designed to work together. You do not need to build custom integrations from scratch. You install the servers, configure them in your Claude Code environment, and start issuing commands. If you have not set up your MCP environment yet, start with our <a href="/blog/claude-code-mcp-setup-guide.html">Claude Code MCP setup guide</a> to get the foundation in place.</p>
+
+            <h2>Claude Code and the MCP Server Stack</h2>
+
+            <p>Claude Code operates as your AI-powered development assistant directly in the terminal. It reads your codebase, understands context, and executes actions. On its own, it is already powerful for writing and refactoring code. But when you connect it to MCP servers, it becomes an automation engine capable of handling multi-step workflows that span your entire development pipeline.</p>
+
+            <p>The MCP server stack we use for full workflow automation consists of five core servers:</p>
+
+            <ul>
+                <li><strong>mcp-git-tools</strong> &mdash; Interfaces with Git repositories for branch management, diff analysis, commit history inspection, and pull request operations.</li>
+                <li><strong>mcp-lint-tools</strong> &mdash; Runs linting and static analysis across multiple languages, reports violations, and can auto-fix common issues.</li>
+                <li><strong>mcp-testing-tools</strong> &mdash; Generates, runs, and analyzes test suites. Supports unit tests, integration tests, and coverage reporting.</li>
+                <li><strong>mcp-docs-tools</strong> &mdash; Extracts code structure and generates documentation in multiple formats including Markdown, JSDoc, and OpenAPI specs.</li>
+                <li><strong>mcp-dep-tools</strong> &mdash; Audits dependencies for outdated packages, known vulnerabilities, license compliance issues, and upgrade paths.</li>
+            </ul>
+
+            <p>Each server exposes a set of tools that Claude Code can call. When you issue a natural language command, Claude Code determines which MCP tools to invoke, in what order, and how to combine their outputs into a coherent result. The servers communicate through the standard MCP protocol, which means they are interchangeable, composable, and easy to install via npx. For a step-by-step installation walkthrough, see our <a href="/blog/npx-mcp-install-guide.html">npx MCP install guide</a>.</p>
+
+            <p>The real power emerges when you chain these servers together. A single prompt can trigger a sequence that checks out a branch, runs linting, generates missing tests, updates documentation, audits dependencies, and produces a deployment readiness report. That is not a hypothetical. That is the workflow we run daily. Below are five specific automation recipes you can implement today.</p>
+
+            <h2>Recipe 1: Automated Code Review</h2>
+
+            <h3>MCP Server: mcp-git-tools + mcp-lint-tools</h3>
+
+            <p>Manual code review is one of the biggest bottlenecks in any development workflow. Reviewers get fatigued, miss edge cases, and create delays when they are unavailable. Automated code review does not replace human judgment for architectural decisions, but it eliminates the need for humans to catch style violations, common bugs, and logic errors that static analysis can detect.</p>
+
+            <p>This recipe uses <code>mcp-git-tools</code> to fetch the diff of a pull request or branch and <code>mcp-lint-tools</code> to run static analysis on the changed files. Claude Code then synthesizes both outputs into a structured review.</p>
+
+<pre><code>claude "Review the changes on branch feature/auth-refactor against main.
+Use mcp-git-tools to get the full diff, then run mcp-lint-tools on all
+changed files. Flag any security concerns, unused variables, type
+mismatches, and style violations. Output a structured review with
+severity levels for each finding."</code></pre>
+
+            <p>What this does: Claude Code calls <code>git_diff</code> from mcp-git-tools to retrieve all changes between the feature branch and main. It then passes each changed file through <code>lint_analyze</code> from mcp-lint-tools. The combined output is a review document organized by file, with each finding tagged as critical, warning, or info. Critical findings include potential null pointer dereferences, SQL injection vectors, and unvalidated inputs. Warnings cover style violations and unused imports. Info items are suggestions for readability improvements.</p>
+
+            <p>The entire process takes under 30 seconds for a typical pull request with 10-20 changed files. Compare that to the 15-30 minutes a human reviewer would spend on the same PR, and the efficiency gain is clear. You can also pipe this into your CI pipeline so that every PR gets an automated review before a human ever looks at it.</p>
+
+            <h2>Recipe 2: Test Generation</h2>
+
+            <h3>MCP Server: mcp-testing-tools</h3>
+
+            <p>Writing tests is essential but tedious, especially for existing codebases with low coverage. The mcp-testing-tools server can analyze your source code, identify untested functions and branches, and generate comprehensive test suites that cover the gaps.</p>
+
+<pre><code>claude "Analyze the src/services/ directory using mcp-testing-tools.
+Identify all functions with less than 80% branch coverage. Generate
+unit tests for the uncovered paths using the existing test patterns
+in tests/services/. Run the generated tests and report results."</code></pre>
+
+            <p>What this does: The <code>coverage_analyze</code> tool from mcp-testing-tools scans your source directory and cross-references it with existing coverage data. It identifies functions and branches that fall below the 80% threshold. The <code>test_generate</code> tool then creates test cases that target specifically those uncovered paths, following the patterns and conventions already present in your test directory. Finally, <code>test_run</code> executes the new tests and reports pass/fail status along with the updated coverage numbers.</p>
+
+            <p>The generated tests are not naive. Because Claude Code reads your existing tests first, it matches your assertion library, naming conventions, mock patterns, and setup/teardown structure. The output looks like tests a team member wrote, not like generic boilerplate. You will still want to review the generated tests for logical correctness, but the structural work is done for you.</p>
+
+            <p>For teams trying to increase coverage on legacy codebases, this recipe can move the needle from 40% to 70% coverage in an afternoon. That is weeks of manual test writing compressed into a few hours of review and refinement.</p>
+
+            <h2>Recipe 3: Documentation Generation</h2>
+
+            <h3>MCP Server: mcp-docs-tools</h3>
+
+            <p>Documentation falls behind because it is a chore that does not block shipping. Nobody opens a PR to update the docs after refactoring a module. Over time, the documentation drifts from reality until it becomes misleading rather than helpful. Automated documentation generation solves this by treating docs as a derived artifact from the code itself.</p>
+
+<pre><code>claude "Use mcp-docs-tools to scan the entire src/ directory. Generate
+API documentation for all exported functions and classes. For each
+module, include a summary, parameter descriptions, return types,
+and usage examples derived from the test files. Output as Markdown
+files in the docs/api/ directory."</code></pre>
+
+            <p>What this does: The <code>docs_scan</code> tool from mcp-docs-tools parses your source tree and extracts all exported symbols, their type signatures, and any existing inline comments or JSDoc annotations. The <code>docs_generate</code> tool then produces structured documentation for each module. Claude Code enriches this by cross-referencing test files to generate realistic usage examples. The result is a complete API reference that reflects the actual current state of your code.</p>
+
+            <p>You can run this recipe on every merge to main so that your documentation is always in sync with your code. No more stale docs. No more onboarding friction caused by documentation that describes a version of the code that no longer exists. The generated Markdown files can be served through any static site generator or documentation platform.</p>
+
+            <p>For prompts that help you get the most out of documentation workflows and other Claude Code tasks, check out our <a href="/blog/best-claude-code-prompts.html">best Claude Code prompts</a> collection.</p>
+
+            <h2>Recipe 4: Dependency Auditing</h2>
+
+            <h3>MCP Server: mcp-dep-tools</h3>
+
+            <p>Dependency management is a security-critical task that most teams handle reactively. A vulnerability is disclosed, Dependabot opens a PR, and someone eventually merges it. That lag between disclosure and patch is a risk window. Proactive dependency auditing closes that window by continuously monitoring your dependency tree for issues before they become emergencies.</p>
+
+<pre><code>claude "Run a full dependency audit using mcp-dep-tools. Check all
+packages in package.json and package-lock.json for known CVEs,
+outdated major versions, deprecated packages, and license
+incompatibilities with our MIT license. Prioritize findings by
+severity and provide upgrade commands for each issue."</code></pre>
+
+            <p>What this does: The <code>dep_audit</code> tool from mcp-dep-tools reads your dependency manifests and checks every package against vulnerability databases, npm registry metadata, and license databases. It produces a prioritized report with four categories: critical vulnerabilities that need immediate patching, outdated packages that are more than one major version behind, deprecated packages that should be replaced with alternatives, and license conflicts that could create legal issues.</p>
+
+            <p>For each finding, Claude Code generates the specific command to resolve it. Critical CVEs get <code>npm audit fix</code> commands or manual upgrade instructions. Deprecated packages get replacement suggestions with migration notes. License conflicts get flagged with the specific clause that conflicts with your project license.</p>
+
+            <p>Running this weekly as a scheduled task means you are never surprised by a dependency issue. You stay ahead of vulnerabilities instead of reacting to them. The report takes about 60 seconds to generate and can save your team from hours of emergency patching when a critical CVE drops on a Friday afternoon.</p>
+
+            <h2>Recipe 5: Deployment Readiness Checks</h2>
+
+            <h3>MCP Server: mcp-git-tools + mcp-testing-tools + mcp-lint-tools</h3>
+
+            <p>The most anxiety-inducing moment in any development cycle is hitting the deploy button. Did all the tests pass? Are there any lint errors that slipped through? Is the branch up to date with main? Are there any merge conflicts lurking? Deployment readiness checks automate the pre-deployment verification so you can deploy with confidence instead of hope.</p>
+
+<pre><code>claude "Run a full deployment readiness check for the release/v2.4
+branch. Use mcp-git-tools to verify the branch is up to date with
+main and has no conflicts. Use mcp-lint-tools to run a full lint
+pass on the entire codebase. Use mcp-testing-tools to run the
+complete test suite and verify coverage thresholds. Generate a
+go/no-go report with any blockers listed."</code></pre>
+
+            <p>What this does: This recipe orchestrates three MCP servers in sequence. First, <code>mcp-git-tools</code> checks that the release branch has merged all changes from main and has no conflicts. Second, <code>mcp-lint-tools</code> runs a comprehensive lint pass and reports any violations that would block deployment. Third, <code>mcp-testing-tools</code> executes the full test suite and verifies that coverage meets your configured thresholds.</p>
+
+            <p>Claude Code aggregates all results into a single go/no-go report. If all checks pass, you get a green light with a summary of what was verified. If any check fails, you get a detailed list of blockers with specific instructions for resolving each one. The report includes the exact files that need attention, the specific tests that failed, and the lint rules that were violated.</p>
+
+            <p>This recipe is particularly valuable for teams that deploy frequently. Instead of a manual checklist that someone has to work through before every release, you have an automated gate that catches issues before they reach production. It integrates naturally into a continuous deployment pipeline as the final verification step before the deploy command executes.</p>
+
+            <h2>Putting It All Together</h2>
+
+            <p>Each of these five recipes is useful on its own. Together, they form a complete automated development workflow that covers the entire lifecycle from code writing to deployment. The key is that they all run through the same interface: Claude Code with MCP servers. There is no context switching between different tools, dashboards, or platforms. You issue natural language commands and get structured results.</p>
+
+            <p>The setup investment is minimal. Install the five MCP servers, configure them in your Claude Code settings, and start with the recipe that addresses your biggest pain point. Most developers start with automated code review because the time savings are immediately obvious. From there, adding test generation and documentation keeps the momentum going. Dependency auditing and deployment checks round out the full workflow.</p>
+
+            <p>The developers who will thrive in 2026 and beyond are the ones who treat automation as infrastructure, not as an afterthought. Every hour you invest in setting up these workflows pays dividends for as long as you are writing code. The tools are ready. The recipes are proven. The only variable is whether you start today or keep doing things manually while your competitors automate.</p>
+
+            <div class="cta-box">
+                <h3>Claude Code Prompt Pack</h3>
+                <p>50+ tested prompts for code review, refactoring, test generation, and documentation. Copy-paste ready for Claude Code with MCP servers.</p>
+                <a href="https://rog0x.gumroad.com/l/claude-code-prompt-pack" class="cta-button">Get the Prompt Pack</a>
+            </div>
+
+            <div class="cta-box">
+                <h3>DevOps Prompt Pack</h3>
+                <p>40+ automation prompts for CI/CD pipelines, deployment checks, dependency auditing, and infrastructure management with Claude Code.</p>
+                <a href="https://rog0x.gumroad.com/l/devops-prompt-pack" class="cta-button">Get the DevOps Pack</a>
+            </div>
+
+            <div class="related">
+                <h2>Related Articles</h2>
+                <ul>
+                    <li><a href="/blog/claude-code-mcp-setup-guide.html">Complete Guide to Setting Up Claude Code with MCP Servers</a></li>
+                    <li><a href="/blog/npx-mcp-install-guide.html">How to Install MCP Servers with npx: Step-by-Step Guide</a></li>
+                    <li><a href="/blog/best-claude-code-prompts.html">Best Claude Code Prompts for Developer Productivity</a></li>
+                    <li><a href="/blog/ai-automation-workflows-2026.html">AI Automation Workflows That Actually Work in 2026</a></li>
+                    <li><a href="/blog/30-mcp-servers-milestone.html">Running 30+ MCP Servers: What I Learned</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 rog0x
+        </div>
+    </footer>
+</body>
+</html>

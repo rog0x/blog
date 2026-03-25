@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best MCP Servers for Data Analysis in 2026 | rog0x</title>
+    <meta name="description" content="Top MCP servers for data analysis, CSV processing, database queries, and visualization. Free tools for data scientists using Claude Code.">
+    <meta name="keywords" content="MCP servers data analysis, data science MCP, Claude Code data tools, CSV processing AI">
+    <link rel="canonical" href="https://blog-theta-eight-85.vercel.app/mcp-servers-for-data-analysis.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article h3 { font-size: 1.15rem; margin: 24px 0 8px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul, article ol { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>Best MCP Servers for Data Analysis in 2026</h1>
+            <div class="meta">March 25, 2026 &middot; 8 min read &middot; <span class="tag">MCP</span><span class="tag">Data Science</span><span class="tag">Tools</span></div>
+
+            <p>Data analysis used to mean switching between Jupyter notebooks, terminal commands, SQL clients, and visualization tools. MCP (Model Context Protocol) servers change that entirely. They give AI assistants like Claude Code direct access to your data &mdash; files, databases, APIs &mdash; so you can analyze, transform, and visualize without leaving your editor.</p>
+
+            <p>This guide covers the best MCP servers for data analysis workflows in 2026. Every tool listed here is free and open-source.</p>
+
+            <h2>Why MCP Servers for Data Analysis?</h2>
+
+            <p>Traditional data analysis involves a lot of context-switching. You write a SQL query in one tool, export CSV from another, load it into pandas, generate a chart, then paste results into a report. Each step breaks your flow.</p>
+
+            <p>MCP servers eliminate that friction by giving your AI assistant direct tool access:</p>
+
+            <ul>
+                <li><strong>Read and write files</strong> &mdash; CSV, JSON, Parquet, without manual loading</li>
+                <li><strong>Query databases</strong> &mdash; Run SQL against SQLite, PostgreSQL, or BigQuery directly</li>
+                <li><strong>Transform data</strong> &mdash; Filter, aggregate, pivot, and reshape datasets in-place</li>
+                <li><strong>Generate visualizations</strong> &mdash; Create charts and graphs from data without separate plotting code</li>
+                <li><strong>Chain operations</strong> &mdash; Build multi-step pipelines in natural language</li>
+            </ul>
+
+            <p>Instead of writing boilerplate code for each step, you describe what you want and the AI uses MCP tools to execute it. The result: faster exploration, fewer errors, and analysis that flows like a conversation.</p>
+
+            <h2>1. Filesystem MCP Server &mdash; Local Data Access</h2>
+
+            <p>The foundation of any data workflow. The Filesystem MCP server gives Claude Code read/write access to local files and directories. Without it, the AI can only see what you paste into the chat.</p>
+
+            <h3>What it does</h3>
+            <ul>
+                <li>Read CSV, JSON, TSV, and text files from local directories</li>
+                <li>Write processed output back to disk</li>
+                <li>List directory contents to discover datasets</li>
+                <li>Watch for file changes in data pipelines</li>
+            </ul>
+
+            <h3>Installation</h3>
+            <pre><code>npx @anthropic/create-mcp --server filesystem</code></pre>
+
+            <p>Or add manually to your Claude Code config:</p>
+            <pre><code>{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-filesystem", "/path/to/data"]
+    }
+  }
+}</code></pre>
+
+            <h3>Data analysis use case</h3>
+            <p>Point the filesystem server at your data directory and ask Claude Code to explore it. "List all CSV files in /data/sales, read the largest one, and summarize the columns." The AI discovers your data, reads it, and gives you a structural overview &mdash; all without you writing a single line of code.</p>
+
+            <h2>2. mcp-json-tools &mdash; CSV and JSON Processing</h2>
+
+            <p>Raw file access is useful, but <code>mcp-json-tools</code> adds structured data operations on top. It parses CSV and JSON files into queryable structures, so the AI can filter, sort, aggregate, and transform data natively.</p>
+
+            <h3>What it does</h3>
+            <ul>
+                <li>Parse CSV files with automatic type detection</li>
+                <li>Query JSON structures using JSONPath expressions</li>
+                <li>Filter rows by conditions (equals, greater than, contains, regex)</li>
+                <li>Aggregate data: sum, average, count, min, max, group-by</li>
+                <li>Convert between CSV and JSON formats</li>
+                <li>Merge and join datasets on shared keys</li>
+            </ul>
+
+            <h3>Installation</h3>
+            <pre><code>npm install -g mcp-json-tools</code></pre>
+
+            <pre><code>{
+  "mcpServers": {
+    "json-tools": {
+      "command": "mcp-json-tools",
+      "args": []
+    }
+  }
+}</code></pre>
+
+            <h3>Data analysis use case</h3>
+            <p>You have a 50MB CSV export from your analytics platform. Instead of loading it into pandas or Excel, ask Claude Code: "Read sales_2026.csv, group by region, calculate total revenue per region, and show the top 5." The mcp-json-tools server handles the parsing and aggregation directly. No scripts needed.</p>
+
+            <h2>3. SQLite MCP Server &mdash; Database Queries</h2>
+
+            <p>For structured data that lives in databases, the SQLite MCP server is essential. It lets Claude Code run SQL queries against local SQLite databases &mdash; perfect for analyzing application data, logs, or any dataset you've imported into SQLite.</p>
+
+            <h3>What it does</h3>
+            <ul>
+                <li>Execute SELECT queries against .db and .sqlite files</li>
+                <li>Inspect table schemas and relationships</li>
+                <li>Run aggregation queries (GROUP BY, HAVING, window functions)</li>
+                <li>Create temporary tables for intermediate analysis</li>
+                <li>Export query results to CSV or JSON</li>
+            </ul>
+
+            <h3>Installation</h3>
+            <pre><code>npx @anthropic/create-mcp --server sqlite</code></pre>
+
+            <pre><code>{
+  "mcpServers": {
+    "sqlite": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-sqlite", "--db", "/path/to/database.db"]
+    }
+  }
+}</code></pre>
+
+            <h3>Data analysis use case</h3>
+            <p>Point it at your application's SQLite database and ask: "Show me the schema, then find the top 10 users by order count in the last 90 days, with their total spend and average order value." Claude Code inspects the schema, writes the SQL, executes it, and presents the results &mdash; all in one interaction.</p>
+
+            <h2>4. BigQuery MCP Server &mdash; Cloud-Scale Analytics</h2>
+
+            <p>When your data lives in Google BigQuery, this server connects Claude Code to your data warehouse. It's built for teams that already use BigQuery for analytics and want AI-assisted exploration.</p>
+
+            <h3>What it does</h3>
+            <ul>
+                <li>Run BigQuery SQL from Claude Code</li>
+                <li>List datasets and tables in your project</li>
+                <li>Preview table schemas and row counts</li>
+                <li>Execute complex analytical queries with partitioning and clustering</li>
+                <li>Export results to local files for further analysis</li>
+            </ul>
+
+            <h3>Installation</h3>
+            <pre><code>npm install -g @anthropic/mcp-server-bigquery</code></pre>
+
+            <pre><code>{
+  "mcpServers": {
+    "bigquery": {
+      "command": "mcp-server-bigquery",
+      "args": ["--project", "your-gcp-project-id"]
+    }
+  }
+}</code></pre>
+
+            <p>Requires Google Cloud credentials configured locally (<code>gcloud auth application-default login</code>).</p>
+
+            <h3>Data analysis use case</h3>
+            <p>You need to analyze user behavior across millions of events. Ask Claude Code: "Query the events table for the last 30 days, calculate funnel conversion rates from signup to purchase, broken down by acquisition channel." The AI writes optimized BigQuery SQL, runs it, and summarizes the funnel metrics.</p>
+
+            <h2>5. Pandas MCP Server &mdash; DataFrame Operations</h2>
+
+            <p>Community-built MCP servers bring pandas-style DataFrame operations into the MCP ecosystem. These servers expose pandas functionality as MCP tools, so the AI can perform complex transformations that go beyond simple filtering.</p>
+
+            <h3>What it does</h3>
+            <ul>
+                <li>Load data from CSV, Excel, Parquet, and Feather formats</li>
+                <li>Pivot tables, melt, stack, and unstack operations</li>
+                <li>Time series resampling and rolling windows</li>
+                <li>Statistical functions: correlation, regression, distribution fitting</li>
+                <li>Handle missing data: imputation, interpolation, forward/backward fill</li>
+                <li>Merge, concat, and join multiple DataFrames</li>
+            </ul>
+
+            <h3>Installation</h3>
+            <pre><code>pip install mcp-pandas-server</code></pre>
+
+            <pre><code>{
+  "mcpServers": {
+    "pandas": {
+      "command": "python",
+      "args": ["-m", "mcp_pandas_server"]
+    }
+  }
+}</code></pre>
+
+            <h3>Data analysis use case</h3>
+            <p>You have time series data with missing values and need to detect anomalies. "Load sensor_data.csv, fill missing values using linear interpolation, compute a 7-day rolling average, and flag any data points more than 3 standard deviations from the rolling mean." The pandas server handles each operation as a tool call, chaining them together automatically.</p>
+
+            <h2>6. Visualization MCP Servers &mdash; Charts and Graphs</h2>
+
+            <p>Data analysis isn't complete without visualization. Several community MCP servers wrap plotting libraries like Matplotlib, Plotly, and Vega-Lite, letting Claude Code generate charts directly.</p>
+
+            <h3>What they do</h3>
+            <ul>
+                <li>Generate bar charts, line charts, scatter plots, histograms</li>
+                <li>Create heatmaps for correlation matrices</li>
+                <li>Build interactive Plotly charts saved as HTML</li>
+                <li>Export static charts as PNG or SVG</li>
+                <li>Create dashboards combining multiple chart types</li>
+            </ul>
+
+            <h3>Installation (example: mcp-chart-server)</h3>
+            <pre><code>pip install mcp-chart-server</code></pre>
+
+            <pre><code>{
+  "mcpServers": {
+    "charts": {
+      "command": "python",
+      "args": ["-m", "mcp_chart_server", "--output-dir", "./charts"]
+    }
+  }
+}</code></pre>
+
+            <h3>Data analysis use case</h3>
+            <p>After analyzing your sales data, ask Claude Code: "Create a line chart showing monthly revenue trends for 2025 vs 2026, with a bar chart overlay showing order counts. Save as revenue_comparison.png." The visualization server renders the chart and saves it locally.</p>
+
+            <h2>Combining MCP Servers for Full Workflows</h2>
+
+            <p>The real power emerges when you use multiple MCP servers together. Here's what a complete data analysis workflow looks like:</p>
+
+            <ol>
+                <li><strong>Filesystem</strong> &mdash; Discover and read raw data files</li>
+                <li><strong>JSON Tools</strong> &mdash; Parse and initial filtering of CSV/JSON data</li>
+                <li><strong>Pandas Server</strong> &mdash; Complex transformations, statistical analysis</li>
+                <li><strong>SQLite</strong> &mdash; Store intermediate results, run SQL for cross-dataset queries</li>
+                <li><strong>Visualization</strong> &mdash; Generate charts from processed data</li>
+            </ol>
+
+            <p>A single prompt can trigger a chain across all these servers: "Read all CSV files in /data/q1, merge them by date, calculate weekly averages, compare against the targets in targets.db, and create a chart showing performance vs target."</p>
+
+            <h3>Example: Full Analysis Config</h3>
+            <pre><code>{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-filesystem", "./data"]
+    },
+    "json-tools": {
+      "command": "mcp-json-tools",
+      "args": []
+    },
+    "sqlite": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-server-sqlite", "--db", "./analysis.db"]
+    },
+    "charts": {
+      "command": "python",
+      "args": ["-m", "mcp_chart_server", "--output-dir", "./output"]
+    }
+  }
+}</code></pre>
+
+            <h2>Tips for Data Analysis with MCP</h2>
+
+            <ul>
+                <li><strong>Start with schema discovery.</strong> Always ask the AI to explore the data structure first before running analysis. "What columns are in this CSV? What are the data types? Any missing values?"</li>
+                <li><strong>Use SQLite as a staging area.</strong> Import large CSVs into SQLite for faster repeated queries. SQL is more efficient than re-parsing CSV files every time.</li>
+                <li><strong>Chain prompts for complex analysis.</strong> Don't try to do everything in one prompt. First explore, then clean, then analyze, then visualize.</li>
+                <li><strong>Save intermediate results.</strong> Ask the AI to write processed data back to disk so you don't lose work if the session ends.</li>
+                <li><strong>Validate with spot checks.</strong> After any transformation, ask the AI to show sample rows and row counts to verify the operation worked correctly.</li>
+            </ul>
+
+            <h2>What's Next for MCP and Data Science</h2>
+
+            <p>The MCP ecosystem for data analysis is growing fast. In the coming months, expect dedicated servers for:</p>
+
+            <ul>
+                <li>Direct connections to PostgreSQL, MySQL, and other production databases</li>
+                <li>Integration with dbt for transformation pipelines</li>
+                <li>Real-time streaming data analysis</li>
+                <li>Machine learning model training and evaluation</li>
+                <li>Notebook-style outputs with inline charts and tables</li>
+            </ul>
+
+            <p>The trend is clear: MCP servers are turning AI coding assistants into full data analysis platforms. If you work with data regularly, setting up these servers is one of the highest-leverage investments you can make.</p>
+
+            <div class="cta-box">
+                <h3>Explore MCP Server Configs and Tools</h3>
+                <p>Browse ready-to-use MCP server configurations, data analysis prompt packs, and automation tools on GitHub.</p>
+                <a href="https://github.com/rog0x">View on GitHub</a>
+            </div>
+
+            <h2>Related Resources</h2>
+            <ul>
+                <li><a href="/best-mcp-servers-2026.html">12 Best Free MCP Servers for 2026</a></li>
+                <li><a href="/claude-code-mcp-setup-guide.html">How to Set Up MCP Servers in Claude Code</a></li>
+                <li><a href="/ai-prompts-for-data-science.html">AI Prompts for Data Science</a></li>
+                <li><a href="/automate-workflows-with-ai.html">Automate Workflows with AI</a></li>
+                <li><a href="/ai-coding-assistants-compared-2026.html">AI Coding Assistants Compared: 2026</a></li>
+            </ul>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>

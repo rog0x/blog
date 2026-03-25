@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 AI Automation Workflows That Save 10+ Hours a Week | rog0x</title>
+    <meta name="description" content="Practical AI automation workflows for developers and freelancers. Code reviews, deployments, content creation, client onboarding — automate the repetitive work.">
+    <meta name="keywords" content="AI automation workflows, save time AI, developer automation, AI workflow examples 2026">
+    <link rel="canonical" href="https://blog-theta-eight-85.vercel.app/ai-automation-workflows-2026.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #0a0a0a; --surface: #141414; --border: #262626; --text: #fafafa; --muted: #a1a1aa; --accent: #3b82f6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        article { padding: 40px 0; }
+        article h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+        article h2 { font-size: 1.4rem; margin: 32px 0 12px; }
+        article h3 { font-size: 1.15rem; margin: 24px 0 8px; }
+        article p { margin-bottom: 16px; color: #d4d4d8; }
+        article ul, article ol { margin: 0 0 16px 24px; color: #d4d4d8; }
+        article li { margin-bottom: 6px; }
+        article code { background: #1e1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        article pre { background: #1e1e2e; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; }
+        article pre code { background: none; padding: 0; }
+        article a { color: var(--accent); }
+        .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 32px 0; }
+        .cta-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+        .cta-box p { margin-bottom: 12px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .tag { display: inline-block; background: #3b82f615; color: var(--accent); padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; margin-right: 6px; }
+        .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">rog<span>0x</span> blog</a>
+            <nav>
+                <a href="https://landing-site-virid-ten.vercel.app">Products</a>
+                <a href="https://github.com/rog0x">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <a href="/" class="back">&larr; Back to all posts</a>
+            <h1>7 AI Automation Workflows That Save 10+ Hours a Week</h1>
+            <div class="meta">March 25, 2026 &middot; 9 min read &middot; <span class="tag">AI</span><span class="tag">Automation</span><span class="tag">Productivity</span></div>
+
+            <p>Most developers and freelancers spend half their week on work that does not require original thought. Code reviews that follow the same checklist. Deployment steps you have done a thousand times. Weekly reports that pull from the same dashboards. Client onboarding emails that are 90% identical.</p>
+
+            <p>This is exactly the kind of work AI automation handles well. Not the creative, strategic work — the repetitive stuff that eats your calendar and drains your energy.</p>
+
+            <p>Here are 7 specific workflows I have automated. Each one includes the problem it solves, how to set it up, what tools you need, and realistic time savings. Combined, they save me over 10 hours every single week.</p>
+
+            <h2>1. Automated Code Review with Claude Code</h2>
+
+            <h3>The problem</h3>
+            <p>Code reviews are essential but time-consuming. For a team of 2-5 developers, a senior engineer can easily spend 5-8 hours per week just reviewing pull requests. Most of that time is catching the same categories of issues: missing error handling, inconsistent naming, security oversights, missing tests.</p>
+
+            <h3>The solution</h3>
+            <p>Set up Claude Code as the first-pass reviewer on every PR. It catches the mechanical issues automatically, so human reviewers can focus on architecture, business logic, and design decisions.</p>
+
+            <pre><code># .github/workflows/ai-review.yml
+name: AI Code Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: AI Review
+        run: |
+          claude-code review \
+            --diff "origin/main...HEAD" \
+            --checklist security,errors,tests,naming \
+            --post-comments</code></pre>
+
+            <h3>Tools needed</h3>
+            <ul>
+                <li>Claude Code CLI</li>
+                <li>GitHub Actions (or GitLab CI)</li>
+                <li>A review checklist customized to your codebase</li>
+            </ul>
+
+            <h3>Time saved: ~3 hours/week</h3>
+            <p>The AI catches 70-80% of review comments automatically. Human reviewers only need to verify the AI's suggestions and focus on higher-level feedback. PRs that used to sit in the review queue for hours now get initial feedback in minutes.</p>
+
+            <h2>2. PR to Deploy Pipeline with AI Checks</h2>
+
+            <h3>The problem</h3>
+            <p>The gap between merging a PR and deploying to production involves manual checks: verifying tests passed, checking for breaking changes, updating changelogs, notifying stakeholders. Each deploy takes 20-30 minutes of human attention.</p>
+
+            <h3>The solution</h3>
+            <p>Build a pipeline where AI handles the pre-deployment verification automatically. When a PR is merged, AI reviews the changes, generates a changelog entry, runs a risk assessment, and either auto-deploys (low risk) or flags for human approval (high risk).</p>
+
+            <pre><code># deploy-pipeline.yml
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ai-deploy-check:
+    steps:
+      - name: Analyze changes
+        run: |
+          claude-code analyze \
+            --diff "${{ github.event.before }}...${{ github.sha }}" \
+            --output risk-report.json
+
+      - name: Generate changelog
+        run: |
+          claude-code changelog \
+            --from "${{ github.event.before }}" \
+            --format markdown >> CHANGELOG.md
+
+      - name: Deploy or flag
+        run: |
+          RISK=$(jq -r '.risk_level' risk-report.json)
+          if [ "$RISK" = "low" ]; then
+            ./deploy.sh production
+          else
+            gh issue create --title "Manual deploy review needed" \
+              --body "$(cat risk-report.json)"
+          fi</code></pre>
+
+            <h3>Tools needed</h3>
+            <ul>
+                <li>Claude Code CLI with analyze and changelog commands</li>
+                <li>GitHub Actions or your CI/CD platform</li>
+                <li>Deployment scripts (Vercel, AWS, or custom)</li>
+            </ul>
+
+            <h3>Time saved: ~1.5 hours/week</h3>
+            <p>With 5-10 deploys per week, saving 15-20 minutes per deploy adds up fast. The AI-generated changelogs alone save significant time and are more consistent than manually written ones.</p>
+
+            <h2>3. Content Repurposing: Blog to Social to Email</h2>
+
+            <h3>The problem</h3>
+            <p>You write a blog post and it lives on your blog. To maximize reach, you should also create social media posts, an email newsletter version, Twitter/X threads, LinkedIn posts, and short-form summaries. Doing this manually for every article takes 2-3 hours.</p>
+
+            <h3>The solution</h3>
+            <p>Build a content repurposing pipeline that takes a published blog post and automatically generates all derivative content.</p>
+
+            <pre><code># repurpose.sh
+#!/bin/bash
+ARTICLE_URL=$1
+
+# Extract article content
+CONTENT=$(curl -s "$ARTICLE_URL" | claude-code extract --format markdown)
+
+# Generate all formats
+claude-code generate \
+  --input "$CONTENT" \
+  --formats "twitter-thread,linkedin-post,email-newsletter,reddit-post" \
+  --tone "professional but conversational" \
+  --output ./content-output/
+
+# Schedule posts
+node schedule-social.js ./content-output/twitter-thread.md
+node schedule-social.js ./content-output/linkedin-post.md
+node send-newsletter.js ./content-output/email-newsletter.md</code></pre>
+
+            <p>Each output format has its own rules. Twitter threads need hooks and numbered points. LinkedIn posts need a strong opening line and professional framing. Email newsletters need a personal angle and a clear CTA. The AI handles these differences automatically once you set up the templates.</p>
+
+            <h3>Tools needed</h3>
+            <ul>
+                <li>Claude Code or any AI API for content generation</li>
+                <li>A scheduling tool (Buffer, Typefully, or custom scripts)</li>
+                <li>Email platform API (ConvertKit, Resend, or similar)</li>
+            </ul>
+
+            <h3>Time saved: ~2 hours/week</h3>
+            <p>If you publish 2 articles per week, this saves at least an hour per article on repurposing. The AI-generated versions need light editing (5-10 minutes each) rather than writing from scratch.</p>
+
+            <h2>4. Client Onboarding Automation</h2>
+
+            <h3>The problem</h3>
+            <p>Every new client requires the same setup: welcome email, project questionnaire, contract generation, invoicing setup, project board creation, kickoff meeting scheduling. As a freelancer, this takes 1-2 hours per new client. It is tedious and error-prone when done manually.</p>
+
+            <h3>The solution</h3>
+            <p>Create an automated onboarding pipeline triggered by a new client entry in your CRM or a form submission.</p>
+
+            <pre><code># onboard-client.js
+async function onboardClient(clientData) {
+  // 1. Generate personalized welcome email
+  const welcome = await claude.generate({
+    prompt: `Write a welcome email for ${clientData.name}
+             who hired me for ${clientData.projectType}.
+             Include: timeline overview, what I need from them,
+             next steps. Professional but warm.`
+  });
+  await sendEmail(clientData.email, welcome);
+
+  // 2. Generate project questionnaire
+  const questionnaire = await claude.generate({
+    prompt: `Create a project intake questionnaire for a
+             ${clientData.projectType} project. 10-15 questions
+             covering goals, brand guidelines, technical requirements,
+             timeline preferences, and success metrics.`
+  });
+  await createForm(questionnaire);
+
+  // 3. Generate contract from template
+  const contract = await generateContract({
+    template: 'freelance-standard',
+    client: clientData,
+    scope: clientData.projectType,
+    rate: clientData.agreedRate
+  });
+  await sendForSignature(contract);
+
+  // 4. Create project board
+  await createNotionProject(clientData);
+
+  // 5. Schedule kickoff
+  await sendCalendlyLink(clientData.email, 'kickoff-30min');
+}</code></pre>
+
+            <h3>Tools needed</h3>
+            <ul>
+                <li>AI API for personalized content generation</li>
+                <li>Email service (Resend, SendGrid)</li>
+                <li>Form builder (Typeform, Tally) or custom</li>
+                <li>Contract/e-sign platform (PandaDoc, DocuSign)</li>
+                <li>Notion API for project management</li>
+                <li>Calendly or Cal.com for scheduling</li>
+            </ul>
+
+            <h3>Time saved: ~1 hour/week</h3>
+            <p>With 2-4 new clients per month, this saves 2-4 hours monthly. More importantly, it creates a professional first impression every time. No more forgetting steps or sending generic welcome emails.</p>
+
+            <h2>5. Weekly Report Generation</h2>
+
+            <h3>The problem</h3>
+            <p>Every Monday morning, you need to compile what happened last week: commits merged, issues closed, metrics changes, client updates, revenue numbers. Pulling data from 5 different tools and formatting it into a coherent summary takes 45-60 minutes.</p>
+
+            <h3>The solution</h3>
+            <p>Build a script that pulls data from all your sources and uses AI to generate a human-readable summary.</p>
+
+            <pre><code># weekly-report.sh
+#!/bin/bash
+
+# Pull data from all sources
+COMMITS=$(gh api repos/rog0x/main-project/commits \
+  --jq '.[0:20] | .[] | .commit.message' -q 'since=7 days ago')
+
+ISSUES=$(gh api repos/rog0x/main-project/issues \
+  --jq '.[] | select(.closed_at) | .title')
+
+ANALYTICS=$(node pull-analytics.js --period=7d)
+REVENUE=$(node pull-revenue.js --period=7d)
+
+# Generate report with AI
+claude-code generate \
+  --template weekly-report \
+  --data "commits: $COMMITS" \
+  --data "issues: $ISSUES" \
+  --data "analytics: $ANALYTICS" \
+  --data "revenue: $REVENUE" \
+  --output weekly-report.md
+
+# Send to stakeholders
+node send-report.js weekly-report.md</code></pre>
+
+            <p>The AI does not just dump raw data. It identifies trends ("traffic up 23% driven by the new blog post"), highlights risks ("two critical bugs still open"), and suggests priorities ("focus on the API migration which is blocking three other tasks").</p>
+
+            <h3>Tools needed</h3>
+            <ul>
+                <li>GitHub CLI for repository data</li>
+                <li>Analytics API (Vercel Analytics, Google Analytics)</li>
+                <li>Revenue tracking API (Stripe, Gumroad)</li>
+                <li>Claude Code for report generation</li>
+                <li>Email or Slack for distribution</li>
+            </ul>
+
+            <h3>Time saved: ~45 minutes/week</h3>
+            <p>The report runs automatically on Sunday night and lands in your inbox Monday morning. You spend 5 minutes reviewing it instead of 45 minutes compiling it.</p>
+
+            <h2>6. Dependency Update and Test Pipeline</h2>
+
+            <h3>The problem</h3>
+            <p>Keeping dependencies up to date is critical for security but painfully boring. Dependabot or Renovate creates PRs, but someone still needs to review each update, check for breaking changes, verify tests pass, and merge. With 10-20 dependency PRs per week, this is easily 2 hours of mind-numbing work.</p>
+
+            <h3>The solution</h3>
+            <p>Add an AI layer that analyzes each dependency update, reads the changelog, identifies potential breaking changes, and auto-merges safe updates while flagging risky ones.</p>
+
+            <pre><code># .github/workflows/smart-deps.yml
+name: Smart Dependency Updates
+on:
+  pull_request:
+    branches: [main]
+    paths: ['package.json', 'package-lock.json']
+
+jobs:
+  analyze:
+    if: contains(github.event.pull_request.user.login, 'dependabot')
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run tests
+        run: npm test
+
+      - name: AI analysis
+        run: |
+          CHANGELOG=$(claude-code fetch-changelog \
+            --package "$UPDATED_PKG" \
+            --from "$OLD_VERSION" --to "$NEW_VERSION")
+
+          RISK=$(claude-code analyze \
+            --input "$CHANGELOG" \
+            --check "breaking-changes,deprecations,security" \
+            --output risk-level)
+
+          if [ "$RISK" = "safe" ]; then
+            gh pr merge $PR_NUMBER --auto --squash
+            gh pr comment $PR_NUMBER \
+              --body "Auto-merged: patch update, tests pass,
+                      no breaking changes detected."
+          else
+            gh pr comment $PR_NUMBER \
+              --body "Needs review: $RISK_DETAILS"
+          fi</code></pre>
+
+            <h3>Tools needed</h3>
+            <ul>
+                <li>Dependabot or Renovate for creating update PRs</li>
+                <li>GitHub Actions for the pipeline</li>
+                <li>Claude Code for changelog analysis</li>
+                <li>Your existing test suite</li>
+            </ul>
+
+            <h3>Time saved: ~1.5 hours/week</h3>
+            <p>About 80% of dependency updates are safe patch or minor version bumps. The AI auto-merges these after verifying tests pass and no breaking changes exist. You only manually review the 20% that actually need attention.</p>
+
+            <h2>7. SEO Monitoring with MCP Servers</h2>
+
+            <h3>The problem</h3>
+            <p>SEO is a long game that requires consistent monitoring. Rankings shift, competitors publish new content, technical issues appear, backlinks change. Checking all of this manually across multiple tools takes hours, so most developers just... don't. And their organic traffic suffers.</p>
+
+            <h3>The solution</h3>
+            <p>Set up MCP (Model Context Protocol) servers that connect AI directly to your SEO data sources. The AI monitors everything continuously and alerts you only when action is needed.</p>
+
+            <pre><code># seo-monitor MCP server config
+{
+  "mcpServers": {
+    "search-console": {
+      "command": "npx",
+      "args": ["@nicholasoxford/search-console-mcp"],
+      "config": { "siteUrl": "https://blog-theta-eight-85.vercel.app" }
+    },
+    "analytics": {
+      "command": "npx",
+      "args": ["@vercel/analytics-mcp"]
+    },
+    "competitor-monitor": {
+      "command": "node",
+      "args": ["./mcp-servers/competitor-tracker.js"]
+    }
+  }
+}
+
+# Weekly SEO analysis prompt
+claude-code analyze-seo \
+  --check "rankings,traffic,technical-issues,competitors" \
+  --compare "last-week" \
+  --alert-threshold "10%-drop" \
+  --output seo-report.md</code></pre>
+
+            <p>The MCP servers give AI direct access to your Search Console data, analytics, and competitor information. Instead of you logging into three different dashboards, the AI pulls everything together and tells you what matters.</p>
+
+            <h3>What it monitors</h3>
+            <ul>
+                <li><strong>Ranking changes:</strong> Alerts when target keywords drop more than 5 positions</li>
+                <li><strong>Traffic anomalies:</strong> Flags unusual drops or spikes with likely causes</li>
+                <li><strong>Technical SEO:</strong> Checks for crawl errors, broken links, slow pages</li>
+                <li><strong>Competitor content:</strong> Tracks when competitors publish on your target topics</li>
+                <li><strong>Content opportunities:</strong> Identifies keywords you are close to ranking for (positions 11-20)</li>
+            </ul>
+
+            <h3>Tools needed</h3>
+            <ul>
+                <li>MCP-compatible AI client (Claude Code, Cursor, etc.)</li>
+                <li>Search Console MCP server</li>
+                <li>Analytics MCP server</li>
+                <li>Custom competitor tracking script</li>
+            </ul>
+
+            <h3>Time saved: ~1 hour/week</h3>
+            <p>Instead of manually checking dashboards and spreadsheets, you get a single report that says "here is what changed, here is what matters, here is what to do." The AI even drafts content briefs for the opportunities it identifies.</p>
+
+            <h2>Putting It All Together</h2>
+
+            <p>Here is a summary of the total time savings:</p>
+
+            <ol>
+                <li><strong>AI Code Review:</strong> 3 hours/week</li>
+                <li><strong>PR to Deploy Pipeline:</strong> 1.5 hours/week</li>
+                <li><strong>Content Repurposing:</strong> 2 hours/week</li>
+                <li><strong>Client Onboarding:</strong> 1 hour/week</li>
+                <li><strong>Weekly Reports:</strong> 45 minutes/week</li>
+                <li><strong>Dependency Updates:</strong> 1.5 hours/week</li>
+                <li><strong>SEO Monitoring:</strong> 1 hour/week</li>
+            </ol>
+
+            <p><strong>Total: ~10.75 hours/week</strong></p>
+
+            <p>That is an extra day and a half every week. You can use it to take on another client, build your own products, learn new skills, or just have a life outside of work.</p>
+
+            <p>The key to making automation work is starting small. Pick one workflow from this list — the one that annoys you the most — and automate it this week. Once it is running reliably, move to the next one. Within a month, you will have reclaimed a significant chunk of your time.</p>
+
+            <p>Do not try to automate everything at once. Do not spend weeks building the perfect system before shipping. Get one workflow running, even if it is rough. Improve it over time. The imperfect automation that runs every day beats the perfect automation that never gets built.</p>
+
+            <div class="cta-box">
+                <h3>AI Automation Prompt Pack</h3>
+                <p>50+ ready-to-use prompts for automating code reviews, deployments, content workflows, client management, reporting, and more. Copy, paste, customize, and start saving hours immediately.</p>
+                <a href="https://github.com/rog0x/ai-automation-prompts">Get the AI Automation Pack</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 rog0x &middot; <a href="https://landing-site-virid-ten.vercel.app">Products</a> &middot; <a href="https://github.com/rog0x">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
